@@ -1,0 +1,22 @@
+{
+  "T1_brightness_low": 0.1205616059404228,
+  "T2_contrast_low": 0.10614777083634742,
+  "T3_edge_low": 0.07255367886235546,
+  "T4_brightness_high": 0.40852310697180777,
+  "method": "percentile_based",
+  "percentiles": {
+    "T1": "15th of brightness",
+    "T2": "15th of contrast",
+    "T3": "15th of edge",
+    "T4": "70th of brightness"
+  },
+  "stats_summary": {
+    "brightness_mean": 0.3222955103474955,
+    "brightness_std": 0.18824006508521388,
+    "contrast_mean": 0.3275717177082003,
+    "contrast_std": 0.18868808652050645,
+    "edge_mean": 0.16490194704650407,
+    "edge_std": 0.08388287460153354,
+    "n_samples": 26640
+  }
+}

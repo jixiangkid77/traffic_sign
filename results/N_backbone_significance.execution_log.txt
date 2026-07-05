@@ -1,0 +1,17 @@
+[21:07:29] N_backbone_significance start; device=cpu; boot=5000 seed=42
+[21:07:29] thresholds T1..T4 = (0.1206, 0.1061, 0.0726, 0.4085); labels=12630
+[21:08:44] cached clean: 12630 images (enhanced once)
+[21:09:59] cached lowlight: 12630 images (enhanced once)
+[21:11:08] cached foggy: 12630 images (enhanced once)
+[21:12:18] cached lowcontrast: 12630 images (enhanced once)
+[21:13:26] cached noisy: 12630 images (enhanced once)
+[21:14:35] cached mixed: 12630 images (enhanced once)
+[21:14:36] [CompactCNN] loaded mbnetv3_baseline.pth
+[21:15:54] [CompactCNN] deg: base=63.05 va=68.84 (Δ+5.79pp)  McNemar p=0.00e+00  boot [5.522, 6.062]
+[21:15:54] [CompactCNN] clean: base=93.92 va=91.66 (Δ-2.26pp)  McNemar p=1.00e-45
+[21:15:54] [ShuffleNetV2] loaded shufflenet_baseline.pth
+[21:17:47] [ShuffleNetV2] deg: base=51.57 va=57.19 (Δ+5.62pp)  McNemar p=0.00e+00  boot [5.346, 5.897]
+[21:17:47] [ShuffleNetV2] clean: base=87.37 va=84.93 (Δ-2.44pp)  McNemar p=7.14e-42
+[21:17:47] [MobileNetV2] loaded mobilenet_baseline.pth
+[21:19:06] [MobileNetV2] deg: base=53.13 va=57.56 (Δ+4.43pp)  McNemar p=4.71e-191  boot [4.14, 4.722]
+[21:19:06] [MobileNetV2] clean: base=83.37 va=80.63 (Δ-2.74pp)  McNemar p=1.28e-46

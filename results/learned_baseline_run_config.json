@@ -1,0 +1,43 @@
+{
+  "script": "evaluate_learned_baselines.py",
+  "timestamp": "2026-06-22T04:31:01",
+  "device": "cpu",
+  "python": "3.10.20",
+  "torch": "2.5.1",
+  "opencv": "4.13.0",
+  "classifier_ckpt": "D:\\Project\\traffic_sign\\models\\mbnetv3_baseline.pth",
+  "zero_dce_weights": "D:\\Project\\traffic_sign\\models\\zero_dce_Epoch99.pth",
+  "ffa_net_weights": "D:\\Project\\traffic_sign\\models\\ffa_net_ots.pk",
+  "gtsrb_normalize_mean": [
+    0.3401,
+    0.312,
+    0.3212
+  ],
+  "gtsrb_normalize_std": [
+    0.2725,
+    0.2609,
+    0.2669
+  ],
+  "thresholds": {
+    "T1": 0.1205616059404228,
+    "T2": 0.10614777083634742,
+    "T3": 0.07255367886235546,
+    "T4": 0.40852310697180777
+  },
+  "methods": [
+    "baseline",
+    "va_adaptive",
+    "zero_dce",
+    "ffa_net"
+  ],
+  "testsets": [
+    "clean",
+    "lowlight",
+    "foggy",
+    "lowcontrast",
+    "noisy",
+    "mixed"
+  ],
+  "pipeline": "cv2.imread(BGR) -> enhance(orig size) -> BGR2RGB -> PIL -> Resize32 -> GTSRB Normalize -> frozen CompactCNN",
+  "total_minutes": 319.85
+}

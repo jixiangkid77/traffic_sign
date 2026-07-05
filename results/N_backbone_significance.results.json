@@ -1,0 +1,145 @@
+{
+  "timestamp": "2026-07-04T21:14:35",
+  "boot": 5000,
+  "seed": 42,
+  "testbed": "GTSRB synthetic degradations (12630-image test set)",
+  "deg_testsets": [
+    "lowlight",
+    "foggy",
+    "lowcontrast",
+    "noisy",
+    "mixed"
+  ],
+  "backbones": {
+    "CompactCNN": {
+      "status": "ok",
+      "baseline_deg_avg": 63.05,
+      "va_deg_avg": 68.84,
+      "delta_deg_pp": 5.79,
+      "va_vs_baseline_degraded": {
+        "mcnemar": {
+          "n01": 2384,
+          "n10": 6038,
+          "n_discordant": 8422,
+          "p_two_sided": 0.0,
+          "z_normal_cc": 39.8054
+        },
+        "bootstrap": {
+          "point_pp": 5.786,
+          "ci95_pp": [
+            5.522,
+            6.062
+          ],
+          "excludes_zero": true
+        }
+      },
+      "clean": {
+        "baseline_acc": 93.92,
+        "va_acc": 91.66,
+        "delta_pp": -2.26,
+        "mcnemar": {
+          "n01": 360,
+          "n10": 75,
+          "n_discordant": 435,
+          "p_two_sided": 1.0045094611965697e-45,
+          "z_normal_cc": 13.6168
+        },
+        "bootstrap": {
+          "point_pp": -2.257,
+          "ci95_pp": [
+            -2.581,
+            -1.924
+          ],
+          "excludes_zero": true
+        }
+      }
+    },
+    "ShuffleNetV2": {
+      "status": "ok",
+      "baseline_deg_avg": 51.57,
+      "va_deg_avg": 57.19,
+      "delta_deg_pp": 5.62,
+      "va_vs_baseline_degraded": {
+        "mcnemar": {
+          "n01": 2476,
+          "n10": 6023,
+          "n_discordant": 8499,
+          "p_two_sided": 0.0,
+          "z_normal_cc": 38.464
+        },
+        "bootstrap": {
+          "point_pp": 5.617,
+          "ci95_pp": [
+            5.346,
+            5.897
+          ],
+          "excludes_zero": true
+        }
+      },
+      "clean": {
+        "baseline_acc": 87.37,
+        "va_acc": 84.93,
+        "delta_pp": -2.44,
+        "mcnemar": {
+          "n01": 426,
+          "n10": 118,
+          "n_discordant": 544,
+          "p_two_sided": 7.1364387321715e-42,
+          "z_normal_cc": 13.1625
+        },
+        "bootstrap": {
+          "point_pp": -2.439,
+          "ci95_pp": [
+            -2.803,
+            -2.09
+          ],
+          "excludes_zero": true
+        }
+      }
+    },
+    "MobileNetV2": {
+      "status": "ok",
+      "baseline_deg_avg": 53.13,
+      "va_deg_avg": 57.56,
+      "delta_deg_pp": 4.43,
+      "va_vs_baseline_degraded": {
+        "mcnemar": {
+          "n01": 3171,
+          "n10": 5968,
+          "n_discordant": 9139,
+          "p_two_sided": 4.708496402862584e-191,
+          "z_normal_cc": 29.2474
+        },
+        "bootstrap": {
+          "point_pp": 4.429,
+          "ci95_pp": [
+            4.14,
+            4.722
+          ],
+          "excludes_zero": true
+        }
+      },
+      "clean": {
+        "baseline_acc": 83.37,
+        "va_acc": 80.63,
+        "delta_pp": -2.74,
+        "mcnemar": {
+          "n01": 480,
+          "n10": 134,
+          "n_discordant": 614,
+          "p_two_sided": 1.2820258217057793e-46,
+          "z_normal_cc": 13.9231
+        },
+        "bootstrap": {
+          "point_pp": -2.74,
+          "ci95_pp": [
+            -3.127,
+            -2.359
+          ],
+          "excludes_zero": true
+        }
+      }
+    }
+  },
+  "elapsed_min": 11.61
+}

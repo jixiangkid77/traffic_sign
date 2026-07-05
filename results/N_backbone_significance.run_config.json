@@ -1,0 +1,13 @@
+{
+  "timestamp": "2026-07-04T21:14:35",
+  "boot": 5000,
+  "seed": 42,
+  "device": "cpu",
+  "reuses": [
+    "evaluate_backbone_ablation",
+    "enhance",
+    "model.build_model"
+  ],
+  "method": "McNemar exact (primary) + paired bootstrap 95% CI grouped by testset (corroboration)",
+  "point_metric": "degraded-average (5 testsets equally weighted), matches backbone_ablation.csv"
+}

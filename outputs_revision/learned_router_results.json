@@ -1,0 +1,105 @@
+{
+  "timestamp": "2026-07-03T19:11:18",
+  "seed": 42,
+  "val_frac": 0.1,
+  "train_csv": "D:\\Project\\traffic_sign\\outputs_revision\\gtsrb_router_train.csv",
+  "cure_cache": "D:\\Project\\traffic_sign\\outputs_revision\\cure_master_cache.csv",
+  "feature_standardization": {
+    "mean": [
+      0.33750045266293466,
+      0.2481071458871641,
+      0.15251708340511108
+    ],
+    "std": [
+      0.21017054658499976,
+      0.19420778145062434,
+      0.11570684249301134
+    ]
+  },
+  "label_rule": "argmax ptrue over branches; ties -> earliest (passthrough first)",
+  "epochs": {
+    "logreg": 300,
+    "mlp": 400
+  },
+  "hidden": 16,
+  "synthetic_val": {
+    "oracle4": 85.92,
+    "rule": 75.03,
+    "baseline": 69.64,
+    "logreg": {
+      "label_acc": 59.63,
+      "achieved": 79.2
+    },
+    "mlp": {
+      "label_acc": 64.41,
+      "achieved": 81.23
+    }
+  },
+  "cure_deployment": {
+    "baseline": {
+      "deg_avg": 52.56,
+      "cf_acc": 80.77,
+      "dist_deg": {
+        "passthrough": 100.0,
+        "gamma": 0.0,
+        "clahe": 0.0,
+        "stretch": 0.0
+      },
+      "dist_cf": {
+        "passthrough": 100.0,
+        "gamma": 0.0,
+        "clahe": 0.0,
+        "stretch": 0.0
+      }
+    },
+    "rule": {
+      "deg_avg": 57.32,
+      "cf_acc": 80.77,
+      "dist_deg": {
+        "passthrough": 70.1,
+        "gamma": 12.2,
+        "clahe": 15.3,
+        "stretch": 2.3
+      },
+      "dist_cf": {
+        "passthrough": 100.0,
+        "gamma": 0.0,
+        "clahe": 0.0,
+        "stretch": 0.0
+      }
+    },
+    "logreg": {
+      "deg_avg": 56.04,
+      "cf_acc": 82.03,
+      "dist_deg": {
+        "passthrough": 21.2,
+        "gamma": 26.5,
+        "clahe": 0.0,
+        "stretch": 52.3
+      },
+      "dist_cf": {
+        "passthrough": 39.6,
+        "gamma": 39.1,
+        "clahe": 0.0,
+        "stretch": 21.3
+      }
+    },
+    "mlp": {
+      "deg_avg": 58.05,
+      "cf_acc": 78.48,
+      "dist_deg": {
+        "passthrough": 25.8,
+        "gamma": 28.4,
+        "clahe": 6.7,
+        "stretch": 39.1
+      },
+      "dist_cf": {
+        "passthrough": 54.1,
+        "gamma": 30.0,
+        "clahe": 0.0,
+        "stretch": 15.9
+      }
+    }
+  },
+  "cure_oracle4_degavg": 65.64
+}

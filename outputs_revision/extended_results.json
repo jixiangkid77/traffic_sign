@@ -1,0 +1,222 @@
+{
+  "timestamp": "2026-07-04T17:29:04",
+  "boot": 5000,
+  "seed": 42,
+  "point_metrics": {
+    "passthrough": {
+      "deg_acc": 52.56,
+      "deg_f1": 32.19,
+      "cf_acc": 80.77
+    },
+    "gamma": {
+      "deg_acc": 51.1,
+      "deg_f1": 31.89,
+      "cf_acc": 79.81
+    },
+    "clahe": {
+      "deg_acc": 42.18,
+      "deg_f1": 23.9,
+      "cf_acc": 66.05
+    },
+    "stretch": {
+      "deg_acc": 45.69,
+      "deg_f1": 28.91,
+      "cf_acc": 77.29
+    },
+    "va_rule": {
+      "deg_acc": 57.32,
+      "deg_f1": 35.42,
+      "cf_acc": 80.77
+    },
+    "cidnet": {
+      "deg_acc": 55.64,
+      "deg_f1": 37.68,
+      "cf_acc": 80.1
+    },
+    "adair": {
+      "deg_acc": 58.73,
+      "deg_f1": 38.51,
+      "cf_acc": 79.51
+    }
+  },
+  "acc_ci": {
+    "passthrough": [
+      52.07,
+      53.04
+    ],
+    "gamma": [
+      50.64,
+      51.57
+    ],
+    "clahe": [
+      41.7,
+      42.67
+    ],
+    "stretch": [
+      45.24,
+      46.15
+    ],
+    "va_rule": [
+      56.85,
+      57.81
+    ],
+    "cidnet": [
+      55.19,
+      56.13
+    ],
+    "adair": [
+      58.25,
+      59.23
+    ]
+  },
+  "f1_ci": {
+    "passthrough": [
+      31.7,
+      32.62
+    ],
+    "va_rule": [
+      34.92,
+      35.86
+    ],
+    "cidnet": [
+      37.13,
+      38.15
+    ],
+    "adair": [
+      37.99,
+      38.95
+    ]
+  },
+  "legacy": {
+    "zero_dce": {
+      "deg_acc": 47.72,
+      "deg_f1": 27.96,
+      "cf_acc": 78.85,
+      "acc_ci": [
+        47.26,
+        48.16
+      ],
+      "per_challenge": {
+        "Haze": 32.73668639053254,
+        "Rain": 12.396449704142013,
+        "Snow": 63.43195266272189,
+        "Noise": 51.89349112426036,
+        "Darkening": 78.12130177514794
+      }
+    },
+    "ffa_net": {
+      "deg_acc": 54.72,
+      "deg_f1": 35.1,
+      "cf_acc": 79.29,
+      "acc_ci": [
+        54.24,
+        55.21
+      ],
+      "per_challenge": {
+        "Haze": 62.115384615384606,
+        "Rain": 39.053254437869825,
+        "Snow": 63.8905325443787,
+        "Noise": 51.05029585798817,
+        "Darkening": 57.5
+      }
+    },
+    "promptir": {
+      "deg_acc": 54.61,
+      "deg_f1": 35.55,
+      "cf_acc": 79.07,
+      "acc_ci": [
+        54.13,
+        55.07
+      ],
+      "per_challenge": {
+        "Haze": 65.1923076923077,
+        "Rain": 36.4792899408284,
+        "Snow": 64.65976331360946,
+        "Noise": 51.80473372781065,
+        "Darkening": 54.89644970414203
+      }
+    }
+  },
+  "legacy_oracle7": 70.15,
+  "oracle4": 65.64,
+  "oracle6": 69.97,
+  "oracle4_per_challenge": {
+    "Darkening": 80.67,
+    "Noise": 64.17,
+    "Rain": 41.17,
+    "Snow": 75.74,
+    "Haze": 66.43
+  },
+  "oracle6_per_challenge": {
+    "Darkening": 84.54,
+    "Noise": 67.09,
+    "Rain": 44.94,
+    "Snow": 77.59,
+    "Haze": 75.7
+  },
+  "ceiling_cf": 80.77,
+  "gap_capture": {
+    "va_rule": 16.9,
+    "adair": 21.9,
+    "oracle4": 46.4,
+    "oracle6": 61.7
+  },
+  "paired_diffs": {
+    "adair-va_rule": {
+      "point": 1.42,
+      "ci": [
+        1.06,
+        1.75
+      ],
+      "verdict": "SIGNIFICANT"
+    },
+    "cidnet-va_rule": {
+      "point": -1.67,
+      "ci": [
+        -2.02,
+        -1.32
+      ],
+      "verdict": "SIGNIFICANT"
+    },
+    "va_rule-passthrough": {
+      "point": 4.76,
+      "ci": [
+        4.52,
+        5.0
+      ],
+      "verdict": "SIGNIFICANT"
+    },
+    "adair-passthrough": {
+      "point": 6.18,
+      "ci": [
+        5.84,
+        6.51
+      ],
+      "verdict": "SIGNIFICANT"
+    },
+    "adair-cidnet": {
+      "point": 3.09,
+      "ci": [
+        2.69,
+        3.48
+      ],
+      "verdict": "SIGNIFICANT"
+    }
+  },
+  "complementarity_pct": {
+    "both_correct": 52.62,
+    "va_only": 4.7,
+    "adair_only": 6.11,
+    "both_wrong": 36.57,
+    "adair_unique_vs_classical_pool": 2.97,
+    "classical_pool_unique_vs_adair": 9.87
+  },
+  "params": {
+    "CompactCNN": 145291,
+    "AdaIR": 28784824,
+    "CIDNet": 1975569,
+    "Zero-DCE": 79416,
+    "FFA-Net": 4455913,
+    "PromptIR": "n/a (weights only on Colab)"
+  }
+}

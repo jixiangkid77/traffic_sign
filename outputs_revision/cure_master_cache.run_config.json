@@ -1,0 +1,47 @@
+{
+  "script": "F_master_sweep_cache.py",
+  "timestamp": "2026-07-02T23:31:42",
+  "cure_root": "D:\\Project\\traffic_sign\\datasets\\CURE-TSR",
+  "model": "D:\\Project\\traffic_sign\\models\\mbnetv3_baseline.pth",
+  "pipeline": "imread->enhance@ORIGINAL->resize32->BGR2RGB->ToTensor->Normalize",
+  "thresholds": {
+    "T1": 0.1206,
+    "T2": 0.1061,
+    "T3": 0.0726,
+    "T4": 0.4085
+  },
+  "mapping": {
+    "3": 9,
+    "6": 14,
+    "11": 12,
+    "12": 17,
+    "13": 13
+  },
+  "challenges": [
+    4,
+    8,
+    9,
+    11,
+    12
+  ],
+  "severities": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "operators": {
+    "gamma": 0.5,
+    "clahe_clip": 3.0,
+    "clahe_tile": [
+      8,
+      8
+    ],
+    "stretch": "(f-0.5)*1.5+0.5"
+  },
+  "n_rows_this_run": 35152,
+  "smoke": false,
+  "torch": "2.5.1",
+  "opencv": "4.13.0"
+}

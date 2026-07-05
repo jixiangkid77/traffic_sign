@@ -1,0 +1,13 @@
+{
+  "script": "J_local_deep_eval.py",
+  "model": "cidnet",
+  "timestamp": "2026-07-03T20:51:39",
+  "cure_root": "D:\\Project\\traffic_sign\\datasets\\CURE-TSR",
+  "pad_factor": 8,
+  "pipeline": "imread->deep_enhance@orig(pad/8)->resize32->BGR2RGB->ToTensor->Normalize->CompactCNN",
+  "adair_weight": null,
+  "cidnet_weight": "HF:Fediory/HVI-CIDNet-Generalization",
+  "n_rows_this_run": 35152,
+  "torch": "2.5.1",
+  "opencv": "4.13.0"
+}

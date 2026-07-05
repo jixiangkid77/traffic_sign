@@ -1,0 +1,7 @@
+Backbone,Method,Clean,Lowlight,Foggy,Lowcontrast,Noisy,Mixed,DegradedAvg
+CompactCNN,baseline,93.92,54.12,67.27,66.49,68.68,58.71,63.05
+CompactCNN,va_adaptive,91.66,75.24,73.02,65.10,67.36,63.48,68.84
+ShuffleNetV2,baseline,87.37,47.93,44.24,57.69,58.42,49.57,51.57
+ShuffleNetV2,va_adaptive,84.93,65.06,53.11,54.17,58.48,55.12,57.19
+MobileNetV2,baseline,83.37,46.31,51.52,53.48,64.77,49.56,53.13
+MobileNetV2,va_adaptive,80.63,62.13,57.21,50.16,63.66,54.65,57.56

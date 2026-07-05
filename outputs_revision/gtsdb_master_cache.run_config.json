@@ -1,0 +1,18 @@
+{
+  "script": "I_gtsdb_eval.py",
+  "timestamp": "2026-07-03T19:31:13",
+  "gtsdb_dir": "D:\\Project\\traffic_sign\\datasets\\GTSDB\\FullIJCNN2013",
+  "margin": 0.1,
+  "min_margin_px": 5,
+  "split_boundary": 600,
+  "pipeline": "crop@orig->stats@orig->op@orig->resize32->BGR2RGB->ToTensor->Normalize",
+  "stats_source": "enhance.compute_image_stats (live import)",
+  "gtsrb_thresholds": {
+    "T1": 0.1206,
+    "T2": 0.1061,
+    "T3": 0.0726,
+    "T4": 0.4085
+  },
+  "torch": "2.5.1",
+  "opencv": "4.13.0"
+}

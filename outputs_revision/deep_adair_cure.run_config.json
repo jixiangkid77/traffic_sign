@@ -1,0 +1,13 @@
+{
+  "script": "J_local_deep_eval.py",
+  "model": "adair",
+  "timestamp": "2026-07-04T00:07:27",
+  "cure_root": "D:\\Project\\traffic_sign\\datasets\\CURE-TSR",
+  "pad_factor": 8,
+  "pipeline": "imread->deep_enhance@orig(pad/8)->resize32->BGR2RGB->ToTensor->Normalize->CompactCNN",
+  "adair_weight": "D:\\Project\\traffic_sign\\models\\adair5d.ckpt",
+  "cidnet_weight": null,
+  "n_rows_this_run": 35152,
+  "torch": "2.5.1",
+  "opencv": "4.13.0"
+}

@@ -1,0 +1,51 @@
+======================================================================
+Learned-Enhancement Baseline Comparison (Zero-DCE + FFA-Net)
+======================================================================
+device: cpu
+classifier: mbnetv3_baseline.pth (145,291 params)
+thresholds: T1=0.1206 T2=0.1061 T3=0.0726 T4=0.4085
+loaded Zero-DCE: zero_dce_Epoch99.pth (79,416 params)
+loaded FFA-Net: ffa_net_ots.pk (4,455,913 params)
+test labels: 12630
+
+======================================================================
+  baseline     × clean         acc= 93.92%  f1= 90.32%  (13.38 ms/img)
+  baseline     × lowlight      acc= 54.12%  f1= 57.10%  (11.26 ms/img)
+  baseline     × foggy         acc= 67.27%  f1= 60.62%  (11.00 ms/img)
+  baseline     × lowcontrast   acc= 66.49%  f1= 59.60%  (11.03 ms/img)
+  baseline     × noisy         acc= 68.68%  f1= 67.63%  (11.49 ms/img)
+  baseline     × mixed         acc= 58.71%  f1= 55.61%  (11.13 ms/img)
+
+  va_adaptive  × clean         acc= 91.66%  f1= 86.79%  (1.52 ms/img)
+  va_adaptive  × lowlight      acc= 75.24%  f1= 73.69%  (1.64 ms/img)
+  va_adaptive  × foggy         acc= 73.02%  f1= 67.08%  (1.64 ms/img)
+  va_adaptive  × lowcontrast   acc= 65.10%  f1= 58.67%  (1.68 ms/img)
+  va_adaptive  × noisy         acc= 67.36%  f1= 66.79%  (1.60 ms/img)
+  va_adaptive  × mixed         acc= 63.48%  f1= 60.00%  (1.64 ms/img)
+
+  zero_dce     × clean         acc= 89.41%  f1= 85.96%  (73.26 ms/img)
+  zero_dce     × lowlight      acc= 76.93%  f1= 75.63%  (109.87 ms/img)
+  zero_dce     × foggy         acc= 43.87%  f1= 35.56%  (86.60 ms/img)
+  zero_dce     × lowcontrast   acc= 50.14%  f1= 36.53%  (67.40 ms/img)
+  zero_dce     × noisy         acc= 61.11%  f1= 60.96%  (64.22 ms/img)
+  zero_dce     × mixed         acc= 51.56%  f1= 49.29%  (62.02 ms/img)
+
+  ffa_net      × clean         acc= 92.80%  f1= 89.14%  (162.54 ms/img)
+  ffa_net      × lowlight      acc= 50.63%  f1= 52.03%  (162.83 ms/img)
+  ffa_net      × foggy         acc= 93.06%  f1= 89.50%  (162.11 ms/img)
+  ffa_net      × lowcontrast   acc= 79.60%  f1= 76.47%  (161.82 ms/img)
+  ffa_net      × noisy         acc= 61.31%  f1= 59.63%  (162.28 ms/img)
+  ffa_net      × mixed         acc= 65.28%  f1= 64.75%  (165.33 ms/img)
+
+======================================================================
+  Degraded-average (5 sets)   acc / macro-F1
+======================================================================
+  baseline      acc= 63.05%   f1= 60.11%   clean_acc= 93.92%
+  va_adaptive   acc= 68.84%   f1= 65.24%   clean_acc= 91.66%
+  zero_dce      acc= 56.72%   f1= 51.59%   clean_acc= 89.41%
+  ffa_net       acc= 69.97%   f1= 68.48%   clean_acc= 92.80%
+
+  [correctness anchor vs paper Table I]
+    baseline     deg-avg got=63.05  paper=63.05  OK
+    va_adaptive  deg-avg got=68.84  paper=68.84  OK
+    -> harness reproduces paper; learned rows are trustworthy.
