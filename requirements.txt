@@ -1,0 +1,15 @@
+# Redrawing the figures and rebuilding the tables from the result files in
+# outputs_revision/ needs only the first block. torch and the rest are needed to
+# run the classifier, the learned restorers, or the pipeline from scratch.
+
+numpy>=1.24
+pandas>=2.0
+matplotlib>=3.7
+opencv-python>=4.8
+Pillow>=10.0
+
+torch>=2.0
+torchvision>=0.15
+tqdm>=4.65
+safetensors>=0.4
+huggingface-hub>=0.20

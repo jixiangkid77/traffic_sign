@@ -1,0 +1,27 @@
+=== Top-1 Accuracy (%) ===
+testset,baseline,fixed_clahe,fixed_gamma,fixed_stretch,va_adaptive
+clean,93.92,79.78,87.93,74.75,91.67
+lowlight,54.12,60.62,80.39,25.35,75.24
+foggy,67.27,68.84,40.92,76.71,73.02
+lowcontrast,66.49,71.12,43.28,68.04,65.10
+noisy,68.68,41.78,62.17,60.74,67.36
+mixed,58.71,51.35,49.17,56.41,63.48
+
+=== Macro-F1 (%) ===
+testset,baseline,fixed_clahe,fixed_gamma,fixed_stretch,va_adaptive
+clean,90.32,76.67,81.05,73.97,86.80
+lowlight,57.10,56.52,79.14,31.52,73.69
+foggy,60.62,63.69,27.29,70.07,67.08
+lowcontrast,59.60,63.48,25.22,69.04,58.67
+noisy,67.63,42.85,61.00,61.24,66.79
+mixed,55.61,49.16,44.58,56.25,60.00
+
+=== Min-class Accuracy (%) ===
+testset,baseline,fixed_clahe,fixed_gamma,fixed_stretch,va_adaptive
+clean,50.00,34.67,8.89,4.00,50.00
+lowlight,5.00,8.00,8.67,0.00,8.00
+foggy,1.11,6.67,0.00,0.00,9.33
+lowcontrast,5.33,4.44,0.00,0.00,1.33
+noisy,15.33,0.00,3.33,5.33,6.00
+mixed,4.00,3.33,6.00,2.00,7.33
+

@@ -1,0 +1,26 @@
+"=== Latency Measurement (v5, single-image, original size) ==="
+
+CPU,"Intel64 Family 6 Model 189 Stepping 1, GenuineIntel"
+Python,3.10.20
+OpenCV,4.13.0
+N images,1000
+Image size,"variable original (mean H=49.8, W=50.1)"
+N warmup,100
+N repeat,5
+OMP threads,1
+cv2 threads,1
+
+Method,Per-image (ms),Std (ms),FPS
+baseline,0.0001,0.0000,17826604.9
+fixed_clahe,0.0901,0.0015,11098.5
+fixed_gamma,0.0847,0.0074,11893.3
+fixed_stretch,0.0322,0.0016,31157.4
+va_adaptive,0.0933,0.0081,10802.4
+
+=== Overhead vs Baseline ===
+Method,Overhead (ms),Overhead (×)
+baseline,0,1.00x
+fixed_clahe,0.0901,1589.53x
+fixed_gamma,0.0846,1493.71x
+fixed_stretch,0.0321,567.46x
+va_adaptive,0.0933,1645.88x

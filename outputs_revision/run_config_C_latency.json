@@ -1,0 +1,37 @@
+{
+  "script_name": "C_latency",
+  "timestamp": "2026-05-09T20:15:57.515597",
+  "timestamp_human": "2026-05-09 20:15:57",
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.10.20",
+    "cpu": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "cwd": "D:\\Project\\traffic_sign",
+    "opencv_version": "4.13.0",
+    "torch_version": "2.5.1",
+    "cuda_available": false
+  },
+  "params": {
+    "version": "v5 (original size, paper-consistent deployment)",
+    "n_images": 1000,
+    "n_warmup": 100,
+    "n_repeat": 5,
+    "image_size": "original (variable, mean ~50x50)",
+    "mode": "single-image",
+    "methods": [
+      "baseline",
+      "fixed_clahe",
+      "fixed_gamma",
+      "fixed_stretch",
+      "va_adaptive"
+    ],
+    "thread_config": {
+      "OMP_NUM_THREADS": "1",
+      "MKL_NUM_THREADS": "1",
+      "cv2_threads": 1,
+      "torch_threads": 1
+    }
+  },
+  "model_path": "D:\\Project\\traffic_sign\\models\\mbnetv3_baseline.pth",
+  "outputs_dir": "D:\\Project\\traffic_sign\\outputs_revision"
+}

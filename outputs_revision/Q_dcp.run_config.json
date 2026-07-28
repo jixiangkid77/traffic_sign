@@ -1,0 +1,16 @@
+{
+  "script": "Q_dcp_branch.py",
+  "protocol": "Evaluation Protocol Part 8",
+  "constants": {
+    "patch": 15,
+    "omega": 0.95,
+    "t0": 0.1,
+    "gf_radius": 60,
+    "gf_eps": 0.001
+  },
+  "guided_filter": "He and Sun TPAMI 2013 via cv2.boxFilter, border reflect101",
+  "opencv": "4.13.0",
+  "torch": "2.5.1",
+  "images_this_run": 82472,
+  "minutes": 13.8
+}

@@ -1,0 +1,11 @@
+[17:31:57] threads pinned: torch=1 cv2=1; torch 2.5.1, opencv 4.13.0
+[17:32:08] scanned 648180 files; picked 210 (10 warmup + 200 timed), seed=42
+[17:32:09] image sizes: H mean 39.4 [11, 257], W mean 39.6 [11, 211]
+[17:32:09] timing scope: va_rule (stats + route + operator, original size)
+[17:32:09]   va_rule: {'n_timed': 200, 'mean_ms': 0.998, 'median_ms': 0.112, 'p95_ms': 0.525, 'branch_histogram': {'passthrough': 150, 'gamma': 24, 'clahe': 31, 'stretch': 5}}
+[17:32:09] timing scope: classify (resize32 + BGR2RGB + transform + CompactCNN forward, batch=1)
+[17:32:10]   classify32: {'n_timed': 200, 'mean_ms': 2.921, 'median_ms': 2.576, 'p95_ms': 4.655}
+[17:32:11] timing scope: adair enhance (uint8 BGR in/out, single image)
+[17:34:12]   adair_enhance: {'n_timed': 200, 'mean_ms': 584.395, 'median_ms': 361.276, 'p95_ms': 1891.049}
+[17:34:13] timing scope: cidnet enhance (uint8 BGR in/out, single image)
+[17:34:23]   cidnet_enhance: {'n_timed': 200, 'mean_ms': 50.279, 'median_ms': 37.145, 'p95_ms': 123.319}

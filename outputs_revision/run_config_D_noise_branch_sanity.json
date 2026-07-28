@@ -1,0 +1,32 @@
+{
+  "script_name": "D_noise_branch_sanity",
+  "timestamp": "2026-05-09T19:54:33.696469",
+  "timestamp_human": "2026-05-09 19:54:33",
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.10.20",
+    "cpu": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "cwd": "D:\\Project\\traffic_sign",
+    "opencv_version": "4.13.0",
+    "torch_version": "2.5.1",
+    "cuda_available": false
+  },
+  "params": {
+    "version": "v7 (paper-consistent pipeline)",
+    "testsets": [
+      "clean",
+      "lowcontrast",
+      "noisy"
+    ],
+    "noise_threshold_percentile": 85,
+    "thresholds": {
+      "T1": 0.1206,
+      "T2": 0.1061,
+      "T3": 0.0726,
+      "T4": 0.4085
+    },
+    "pipeline": "cv2.imread \u2192 enhance@original \u2192 BGR2RGB \u2192 PIL \u2192 Resize(32) \u2192 ToTensor \u2192 Normalize"
+  },
+  "model_path": "D:\\Project\\traffic_sign\\models\\mbnetv3_baseline.pth",
+  "outputs_dir": "D:\\Project\\traffic_sign\\outputs_revision"
+}

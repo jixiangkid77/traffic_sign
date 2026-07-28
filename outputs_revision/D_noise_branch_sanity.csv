@@ -1,0 +1,26 @@
+=== Noise Branch Sanity Check (v7) ===
+pipeline,"paper-consistent (enhance@original size, PIL resize)"
+noise_threshold,0.0826575994491577
+calibration_samples,2150
+random_seed,42
+
+=== Trigger rates ===
+testset,trigger_rate_pct,mean_noise_stat,median_noise_stat
+clean,11.80,0.0483,0.0444
+lowcontrast,0.00,0.0146,0.0134
+noisy,36.60,0.0790,0.0760
+
+=== Accuracy ===
+testset,method,n,accuracy,macro_f1
+clean,no_prep,12630,93.9192,90.3231
+clean,v1_paper,12630,91.6706,86.7956
+clean,v2_median,12630,91.2352,86.1569
+clean,v2_gaussian,12630,91.2827,86.2042
+lowcontrast,no_prep,12630,66.4925,59.5968
+lowcontrast,v1_paper,12630,65.0990,58.6673
+lowcontrast,v2_median,12630,65.0990,58.6673
+lowcontrast,v2_gaussian,12630,65.0990,58.6673
+noisy,no_prep,12630,68.6778,67.6342
+noisy,v1_paper,12630,67.3555,66.7898
+noisy,v2_median,12630,67.7039,66.8026
+noisy,v2_gaussian,12630,68.5352,67.5525

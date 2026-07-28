@@ -1,0 +1,8 @@
+{
+  "_comment": "Parameter counts for the five learned restorers, so TABLES_main.py can build Table I without the weight files themselves. Those weights belong to their own authors and are not redistributed here; download them from the sources listed in the README. Counts are the ones Table I prints. Use with: python TABLES_main.py --params-json params_learned.json",
+  "cidnet": 1975569,
+  "adair": 28784824,
+  "zero_dce": 79416,
+  "ffa_net": 4455913,
+  "promptir": 35592263
+}

@@ -1,0 +1,55 @@
+======================================================================
+  Noise Branch Sanity Decision (v7 paper-consistent pipeline)
+======================================================================
+
+Pipeline: cv2.imread → enhance(orig) → BGR2RGB → PIL → Resize(32) → tensor
+Noise threshold: 0.0827 (from 2150 stratified train images at original size)
+
+Trigger rates:
+  clean        :  11.8% triggered
+  lowcontrast  :   0.0% triggered
+  noisy        :  36.6% triggered
+
+Accuracy (expect v1_paper to match paper's reported numbers):
+  Paper reference: clean=91.66%, lowcontrast=65.10%, noisy=67.36%
+
+  [clean]
+    no_prep      : acc=93.92%  f1=90.32%
+    v1_paper     : acc=91.67%  f1=86.80%
+    v2_median    : acc=91.24%  f1=86.16%
+    v2_gaussian  : acc=91.28%  f1=86.20%
+  [lowcontrast]
+    no_prep      : acc=66.49%  f1=59.60%
+    v1_paper     : acc=65.10%  f1=58.67%
+    v2_median    : acc=65.10%  f1=58.67%
+    v2_gaussian  : acc=65.10%  f1=58.67%
+  [noisy]
+    no_prep      : acc=68.68%  f1=67.63%
+    v1_paper     : acc=67.36%  f1=66.79%
+    v2_median    : acc=67.70%  f1=66.80%
+    v2_gaussian  : acc=68.54%  f1=67.55%
+
+--- v2_median (vs v1_paper) ---
+  Δ clean       = -0.44 pp
+  Δ lowcontrast = +0.00 pp
+  Δ noisy       = +0.35 pp
+  Verdict: ✗ 收益不足
+
+--- v2_gaussian (vs v1_paper) ---
+  Δ clean       = -0.39 pp
+  Δ lowcontrast = +0.00 pp
+  Δ noisy       = +1.18 pp
+  Verdict: ✗ 收益不足
+
+==================================================
+  vs no_prep
+==================================================
+  v1_paper     : noisy -1.32, clean -2.25
+  v2_median    : noisy -0.97, clean -2.68
+  v2_gaussian  : noisy -0.14, clean -2.64
+
+==================================================
+  最终推荐
+==================================================
+  → 两个 variant 在 noisy 上都未显著提升
+  → 推荐：不加 noise branch，作为 limitation

@@ -1,0 +1,27 @@
+{
+  "script": "G_synth_router_data.py",
+  "timestamp": "2026-07-03T19:07:37",
+  "per_class": 120,
+  "seed": 42,
+  "conditions": [
+    "clean",
+    "lowlight",
+    "foggy",
+    "lowcontrast",
+    "noisy",
+    "mixed"
+  ],
+  "pipeline": "degrade@orig->stats@orig->branch_op@orig->resize32->BGR2RGB->ToTensor->Normalize",
+  "stats_source": "enhance.compute_image_stats (live import)",
+  "degradations_source": "degrade.DEGRADATIONS (live import)",
+  "thresholds": {
+    "T1": 0.1206,
+    "T2": 0.1061,
+    "T3": 0.0726,
+    "T4": 0.4085
+  },
+  "n_rows_this_run": 30960,
+  "smoke": false,
+  "torch": "2.5.1",
+  "opencv": "4.13.0"
+}

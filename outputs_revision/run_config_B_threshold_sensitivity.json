@@ -1,0 +1,48 @@
+{
+  "script_name": "B_threshold_sensitivity",
+  "timestamp": "2026-05-09T20:18:23.098362",
+  "timestamp_human": "2026-05-09 20:18:23",
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.10.20",
+    "cpu": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "cwd": "D:\\Project\\traffic_sign",
+    "opencv_version": "4.13.0",
+    "torch_version": "2.5.1",
+    "cuda_available": false
+  },
+  "params": {
+    "version": "v5 (paper-consistent pipeline)",
+    "T_low_percentiles": [
+      10,
+      15,
+      20
+    ],
+    "T_high_percentiles": [
+      60,
+      70,
+      80
+    ],
+    "testsets": [
+      "lowlight",
+      "foggy",
+      "lowcontrast",
+      "noisy",
+      "mixed"
+    ],
+    "default_thresholds_paper": {
+      "T1": 0.1206,
+      "T2": 0.1061,
+      "T3": 0.0726,
+      "T4": 0.4085
+    },
+    "calibration": {
+      "method": "stratified_sampling@original_size",
+      "samples_per_class": 50,
+      "n_classes": 43,
+      "seed": 42
+    }
+  },
+  "model_path": "D:\\Project\\traffic_sign\\models\\mbnetv3_baseline.pth",
+  "outputs_dir": "D:\\Project\\traffic_sign\\outputs_revision"
+}

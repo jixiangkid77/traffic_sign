@@ -1,0 +1,324 @@
+[
+ {
+  "tag": "F1",
+  "fn": "01_11_07_05_0001.bmp",
+  "occ": 0,
+  "ch": 7,
+  "sev": 5,
+  "true": 12,
+  "size": [
+   11,
+   19
+  ],
+  "outcome": "none",
+  "story": "Gaussian blur: no front end recovers the sign",
+  "best_free": "clahe",
+  "best_learned": "adair",
+  "cells": [
+   {
+    "what": "degraded",
+    "pred": 31
+   },
+   {
+    "what": "clahe",
+    "pred": 1
+   },
+   {
+    "what": "adair",
+    "pred": 31
+   }
+  ],
+  "recovered_by": [],
+  "all_pred": {
+   "passthrough": 31,
+   "dcp": 41,
+   "gamma": 31,
+   "clahe": 1,
+   "stretch": 31,
+   "va_rule": 1,
+   "adair": 31,
+   "cidnet": 31,
+   "zero_dce": 36,
+   "ffa_net": 5,
+   "promptir": 29,
+   "vb": 41
+  },
+  "files": [
+   "F1_degraded.png",
+   "F1_clahe.png",
+   "F1_adair.png"
+  ]
+ },
+ {
+  "tag": "F2",
+  "fn": "01_03_08_03_0082.bmp",
+  "occ": 0,
+  "ch": 8,
+  "sev": 3,
+  "true": 9,
+  "size": [
+   83,
+   90
+  ],
+  "outcome": "learned",
+  "story": "noise: only a learned restorer recovers it",
+  "best_free": "dcp",
+  "best_learned": "adair",
+  "cells": [
+   {
+    "what": "degraded",
+    "pred": 25
+   },
+   {
+    "what": "dcp",
+    "pred": 25
+   },
+   {
+    "what": "adair",
+    "pred": 9
+   }
+  ],
+  "recovered_by": [
+   "adair",
+   "cidnet",
+   "ffa_net",
+   "promptir"
+  ],
+  "all_pred": {
+   "passthrough": 25,
+   "dcp": 25,
+   "gamma": 25,
+   "clahe": 25,
+   "stretch": 14,
+   "va_rule": 25,
+   "adair": 9,
+   "cidnet": 9,
+   "zero_dce": 25,
+   "ffa_net": 9,
+   "promptir": 9,
+   "vb": 25
+  },
+  "files": [
+   "F2_degraded.png",
+   "F2_dcp.png",
+   "F2_adair.png"
+  ]
+ },
+ {
+  "tag": "F3",
+  "fn": "01_03_11_03_0054.bmp",
+  "occ": 0,
+  "ch": 11,
+  "sev": 3,
+  "true": 9,
+  "size": [
+   37,
+   47
+  ],
+  "outcome": "learned",
+  "story": "snow: only a learned restorer recovers it",
+  "best_free": "dcp",
+  "best_learned": "cidnet",
+  "cells": [
+   {
+    "what": "degraded",
+    "pred": 16
+   },
+   {
+    "what": "dcp",
+    "pred": 16
+   },
+   {
+    "what": "cidnet",
+    "pred": 9
+   }
+  ],
+  "recovered_by": [
+   "cidnet"
+  ],
+  "all_pred": {
+   "passthrough": 16,
+   "dcp": 16,
+   "gamma": 16,
+   "clahe": 0,
+   "stretch": 16,
+   "va_rule": 16,
+   "adair": 16,
+   "cidnet": 9,
+   "zero_dce": 16,
+   "ffa_net": 16,
+   "promptir": 16,
+   "vb": 16
+  },
+  "files": [
+   "F3_degraded.png",
+   "F3_dcp.png",
+   "F3_cidnet.png"
+  ]
+ },
+ {
+  "tag": "S1",
+  "fn": "01_06_12_04_0049.bmp",
+  "occ": 0,
+  "ch": 12,
+  "sev": 4,
+  "true": 14,
+  "size": [
+   18,
+   29
+  ],
+  "outcome": "free",
+  "story": "haze: only a training-free operator recovers it",
+  "best_free": "dcp",
+  "best_learned": "adair",
+  "cells": [
+   {
+    "what": "degraded",
+    "pred": 31
+   },
+   {
+    "what": "dcp",
+    "pred": 14
+   },
+   {
+    "what": "adair",
+    "pred": 17
+   }
+  ],
+  "recovered_by": [
+   "dcp",
+   "vb"
+  ],
+  "all_pred": {
+   "passthrough": 31,
+   "dcp": 14,
+   "gamma": 31,
+   "clahe": 16,
+   "stretch": 36,
+   "va_rule": 16,
+   "adair": 17,
+   "cidnet": 36,
+   "zero_dce": 18,
+   "ffa_net": 17,
+   "promptir": 17,
+   "vb": 14
+  },
+  "files": [
+   "S1_degraded.png",
+   "S1_dcp.png",
+   "S1_adair.png"
+  ]
+ },
+ {
+  "tag": "S2",
+  "fn": "01_12_09_03_0005.bmp",
+  "occ": 0,
+  "ch": 9,
+  "sev": 3,
+  "true": 17,
+  "size": [
+   15,
+   20
+  ],
+  "outcome": "free",
+  "story": "rain: only a training-free operator recovers it",
+  "best_free": "dcp",
+  "best_learned": "ffa_net",
+  "cells": [
+   {
+    "what": "degraded",
+    "pred": 13
+   },
+   {
+    "what": "dcp",
+    "pred": 17
+   },
+   {
+    "what": "ffa_net",
+    "pred": 11
+   }
+  ],
+  "recovered_by": [
+   "dcp"
+  ],
+  "all_pred": {
+   "passthrough": 13,
+   "dcp": 17,
+   "gamma": 11,
+   "clahe": 11,
+   "stretch": 11,
+   "va_rule": 13,
+   "adair": 13,
+   "cidnet": 13,
+   "zero_dce": 18,
+   "ffa_net": 11,
+   "promptir": 13,
+   "vb": 13
+  },
+  "files": [
+   "S2_degraded.png",
+   "S2_dcp.png",
+   "S2_ffa_net.png"
+  ]
+ },
+ {
+  "tag": "S3",
+  "fn": "01_13_04_04_0008.bmp",
+  "occ": 0,
+  "ch": 4,
+  "sev": 4,
+  "true": 13,
+  "size": [
+   13,
+   12
+  ],
+  "outcome": "both",
+  "story": "darkening: both recover it",
+  "best_free": "gamma",
+  "best_learned": "zero_dce",
+  "cells": [
+   {
+    "what": "degraded",
+    "pred": 20
+   },
+   {
+    "what": "gamma",
+    "pred": 13
+   },
+   {
+    "what": "zero_dce",
+    "pred": 13
+   }
+  ],
+  "recovered_by": [
+   "adair",
+   "cidnet",
+   "clahe",
+   "dcp",
+   "ffa_net",
+   "gamma",
+   "va_rule",
+   "vb",
+   "zero_dce"
+  ],
+  "all_pred": {
+   "passthrough": 20,
+   "dcp": 13,
+   "gamma": 13,
+   "clahe": 13,
+   "stretch": 19,
+   "va_rule": 13,
+   "adair": 13,
+   "cidnet": 13,
+   "zero_dce": 13,
+   "ffa_net": 13,
+   "promptir": 20,
+   "vb": 13
+  },
+  "files": [
+   "S3_degraded.png",
+   "S3_gamma.png",
+   "S3_zero_dce.png"
+  ]
+ }
+]

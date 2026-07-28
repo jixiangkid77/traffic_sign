@@ -1,0 +1,38 @@
+[13:42:48] threads pinned: torch=1 cv2=1; torch 2.5.1, opencv 4.13.0
+[13:42:48] DCP refinement: guided filter NOT available, frozen fallback. This changes the cost materially, so it is recorded in the output.
+[13:42:48] J.EVAL_CHALLENGES overridden: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]. L_timing sampled from the 5-challenge era; the paper evaluates 12, so the timing pool must match the evidence base.
+[13:43:05] scanned 648180 files; 81120 degraded over 60 cells, 1352 ChallengeFree
+[13:43:08] degraded sample: 210 images, H mean 40.4 [11, 285], W mean 40.1 [11, 211]
+[13:43:09] clean sample: 110 images, H mean 37.5 [11, 192], W mean 38.1 [11, 206]
+[13:43:09] scope: stats (F.compute_stats)
+[13:43:09] scope: route (stats + route_decision, no operator)
+[13:43:09] scope: op_gamma (F.apply_branch)
+[13:43:09] scope: op_clahe (F.apply_branch)
+[13:43:09] scope: op_stretch (F.apply_branch)
+[13:43:09] scope: op_dcp (Q_dcp_branch.dcp_enhance)
+[13:43:09] scope: va_rule on DEGRADED (stats + route + apply_branch)
+[13:43:10] scope: va_rule on CLEAN
+[13:43:10] scope: vb_selector on DEGRADED (clahe branch served by DCP), MEASURED
+[13:43:10] scope: vb_selector on CLEAN
+[13:43:10] scope: classify32 (shared downstream, excluded from every other scope)
+[13:43:11] scope: adair_enhance (J.enhance_batch, single image)
+[13:45:33] scope: cidnet_enhance (J.enhance_batch, single image)
+[20:41:16] threads pinned: torch=1 cv2=1; torch 2.5.1, opencv 4.13.0
+[20:41:16] DCP refinement: guided filter NOT available, frozen fallback. This changes the cost materially, so it is recorded in the output.
+[20:41:16] J.EVAL_CHALLENGES overridden: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] -> [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]. L_timing sampled from the 5-challenge era; the paper evaluates 12, so the timing pool must match the evidence base.
+[20:41:24] scanned 648180 files; 81120 degraded over 60 cells, 1352 ChallengeFree
+[20:41:25] degraded sample: 210 images, H mean 40.4 [11, 285], W mean 40.1 [11, 211]
+[20:41:25] clean sample: 110 images, H mean 37.5 [11, 192], W mean 38.1 [11, 206]
+[20:41:25] scope: stats (F.compute_stats)
+[20:41:25] scope: route (stats + route_decision, no operator)
+[20:41:25] scope: op_gamma (F.apply_branch)
+[20:41:25] scope: op_clahe (F.apply_branch)
+[20:41:25] scope: op_stretch (F.apply_branch)
+[20:41:25] scope: op_dcp (Q_dcp_branch.dcp_enhance)
+[20:41:25] scope: va_rule on DEGRADED (stats + route + apply_branch)
+[20:41:25] scope: va_rule on CLEAN
+[20:41:25] scope: vb_selector on DEGRADED (clahe branch served by DCP), MEASURED
+[20:41:25] scope: vb_selector on CLEAN
+[20:41:25] scope: classify32 (shared downstream, excluded from every other scope)
+[20:41:26] scope: adair_enhance (J.enhance_batch, single image)
+[20:42:43] scope: cidnet_enhance (J.enhance_batch, single image)

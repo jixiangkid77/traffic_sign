@@ -1,0 +1,47 @@
+[18:45:40] Q.HAS_GUIDED = False. The cache is on the unrefined path.
+[18:45:40] constants read from Q: patch 15, omega 0.95, t0 0.1, gf_radius 60, gf_eps 0.001
+[18:45:40] thresholds read from F: {'T1': 0.1206, 'T2': 0.1061, 'T3': 0.0726, 'T4': 0.4085}
+[18:45:40] torch 2.5.1, opencv 4.13.0, threads 1
+[18:45:48] scanned: 82472 usable images
+[18:45:48] stratified sample: 3200 images (2400 degraded over 60 cells at 40 each, 800 clean), seed 42
+[18:45:49] dcp_cure.csv: 82472 rows | merged_per_image.csv: 82472 rows
+[18:46:23] processed 3200 images in 0.6 min
+[18:46:23] 
+[18:46:23] === GUARDS ===
+[18:46:23]   G1  unrefined output bit-identical to Q.dcp_enhance: 3200/3200
+[18:46:23]   G2  pred_dcp_U reproduces dcp_cure.csv: 3200/3200
+[18:46:23]   G3  pred_rule and branch reproduce merged_per_image.csv: 3200/3200
+[18:46:23]   all three guards pass: the harness reproduces what is on disk, so the comparison below is about the refinement and nothing else.
+[18:46:23] 
+[18:46:23] === 1. where the two paths disagree ===
+[18:46:23]     agreement, all                                           91.81%   n = 3200
+[18:46:23]     agreement, degraded                                      90.58%   n = 2400
+[18:46:23]     agreement, clean                                         95.50%   n = 800
+[18:46:23]     agreement, CLAHE branch, the only place V-B calls DCP    87.93%   n = 290
+[18:46:23] 
+[18:46:23] === 2. always-DCP, the baseline in the figures ===
+[18:46:23]     degraded-average   unrefined  57.00   refined  58.92   delta +1.92
+[18:46:23]     clean              unrefined  78.38   refined  79.75   delta +1.38
+[18:46:23] 
+[18:46:23] === 3. V-B, the proposed selector, computed directly ===
+[18:46:23]     V-B sends 290 of 2400 degraded images (12.1%) to DCP
+[18:46:23]     on clean it sends 0 of 800 to DCP; this must be 0, since the rule never leaves passthrough there
+[18:46:23]     degraded-average   unrefined  56.96   refined  56.83   delta -0.12
+[18:46:23]     clean              unrefined  80.25   refined  80.25   delta +0.00
+[18:46:23] 
+[18:46:23] === 4. how much spatial structure the transmission map keeps ===
+[18:46:23]     coefficient of variation of t   unrefined median 0.1190   refined median 0.0219
+[18:46:23]     (near zero means t is effectively constant, so the operator acts as a global affine stretch rather than a spatially varying dehaze)
+[18:46:23] 
+[18:46:23] === 5. the regime the frozen constants land in ===
+[18:46:23]     A is averaged over 1 pixels at the median crop (range 1 to 58)
+[18:46:23]     the 15x15 kernel spans 50% of the shorter side at the median crop, and covers the whole crop on 24.9% of them
+[18:46:23]     the 121x121 guided-filter window is larger than the whole crop on 96.8% of them
+[18:46:23] 
+[18:46:23] === 6. what the refinement would cost ===
+[18:46:23]     DCP without refinement 0.266 ms/img; the guided filter adds 0.170 ms/img (per-image means)
+[18:46:23] 
+[18:46:23] === DECISION ===
+[18:46:23]     V-B's degraded-average moves 0.125 points (threshold 0.20)
+[18:46:23]     the paths agree on 87.93% of clahe-branch predictions (threshold 99.00)
+[18:46:23]     -> MATERIAL. The refinement changes the proposed method. Q_dcp_branch must carry the guided filter explicitly, built from boxFilter so it never rests on an optional module, and be rerun over all 82,472 images; K_merge and every downstream figure follow.

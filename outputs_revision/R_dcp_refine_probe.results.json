@@ -1,0 +1,84 @@
+{
+  "config": {
+    "script": "R_dcp_refine_probe.py",
+    "timestamp": "2026-07-14T18:46:23",
+    "per_cell": 40,
+    "clean_n": 800,
+    "seed": 42,
+    "n": 3200,
+    "has_guided": false,
+    "constants": {
+      "patch": 15,
+      "omega": 0.95,
+      "t0": 0.1,
+      "gf_radius": 60,
+      "gf_eps": 0.001,
+      "a_fraction": 0.001
+    },
+    "thresholds": {
+      "T1": 0.1206,
+      "T2": 0.1061,
+      "T3": 0.0726,
+      "T4": 0.4085
+    },
+    "guided_filter": "He and Sun TPAMI 2013 via cv2.boxFilter, border reflect101; faithful to the published filter but not guaranteed bit-identical to cv2.ximgproc",
+    "torch": "2.5.1",
+    "opencv": "4.13.0"
+  },
+  "guards": {
+    "g1_bit_identical_to_Q": {
+      "passed": 3200,
+      "checked": 3200
+    },
+    "g2_reproduces_dcp_cure": {
+      "passed": 3200,
+      "checked": 3200
+    },
+    "g3_reproduces_merged": {
+      "passed": 3200,
+      "checked": 3200
+    }
+  },
+  "agreement": {
+    "all": 91.8125,
+    "degraded": 90.58333333333334,
+    "clean": 95.5,
+    "clahe_branch": 87.93103448275862,
+    "n_clahe": 290
+  },
+  "always_dcp": {
+    "deg_avg_unrefined": 57.0,
+    "deg_avg_refined": 58.916666666666664,
+    "clean_unrefined": 78.375,
+    "clean_refined": 79.75
+  },
+  "vb": {
+    "deg_avg_unrefined": 56.958333333333336,
+    "deg_avg_refined": 56.833333333333336,
+    "clean_unrefined": 80.25,
+    "clean_refined": 80.25,
+    "clahe_share_degraded": 0.12083333333333333,
+    "clahe_on_clean": 0
+  },
+  "transmission": {
+    "cv_unrefined_median": 0.11896677345370942,
+    "cv_refined_median": 0.021851737325074748
+  },
+  "regime": {
+    "a_pixels_median": 1,
+    "a_pixels_min": 1,
+    "a_pixels_max": 58,
+    "kernel_over_short_side_median": 0.5,
+    "share_kernel_covers_crop": 0.249375,
+    "share_gf_window_exceeds_crop": 0.9675
+  },
+  "timing_ms": {
+    "dcp_unrefined": 0.26553206305834465,
+    "guided_filter_added": 0.16976775252260268
+  },
+  "decision": {
+    "immaterial": false,
+    "vb_deg_avg_shift": 0.125,
+    "clahe_agreement": 87.93103448275862
+  }
+}

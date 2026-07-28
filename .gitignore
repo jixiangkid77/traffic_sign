@@ -1,0 +1,37 @@
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+
+# Datasets and third-party weights are not redistributed here.
+data/
+datasets/
+models/*.ckpt
+models/*.safetensors
+models/*.pk
+models/adair*
+models/*promptir*
+models/*cidnet*
+models/*ffa*
+models/*zero*dce*
+
+# Superseded backbones from an earlier version of this project
+models/mobilenet_baseline.pth
+models/shufflenet_baseline.pth
+models/mbnetv3_baseline_v4_10ep.pth
+
+# Written by TABLES_main.py for a manuscript generator no longer in use
+doc/
+
+# Logs and scratch output
+*.log
+outputs_cure_tsr/
+src/outputs_revision/
+
+# LaTeX build products, if the manuscript is ever built alongside
+*.aux
+*.out
+*.synctex.gz
+*.fls
+*.fdb_latexmk

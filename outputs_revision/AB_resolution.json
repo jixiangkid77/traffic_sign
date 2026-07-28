@@ -1,0 +1,189 @@
+{
+  "design": {
+    "challenges": [
+      7,
+      2,
+      12
+    ],
+    "severities": [
+      3,
+      4,
+      5
+    ],
+    "per_cell": 150,
+    "upsample": 128
+  },
+  "cells": {
+    "GaussianBlur_s3": {
+      "raw": 17.33,
+      "oracle_sigma": 12,
+      "oracle": 30.0,
+      "adair_native": 20.0,
+      "adair_upsampled": 20.0,
+      "up_minus_native": [
+        0.0,
+        -2.67,
+        2.67,
+        1.0
+      ],
+      "up_minus_oracle": [
+        -10.0,
+        -15.33,
+        -4.67
+      ],
+      "verdict_vs_oracle": "below oracle"
+    },
+    "GaussianBlur_s4": {
+      "raw": 11.33,
+      "oracle_sigma": 12,
+      "oracle": 32.0,
+      "adair_native": 16.0,
+      "adair_upsampled": 14.0,
+      "up_minus_native": [
+        -2.0,
+        -6.0,
+        2.0,
+        0.5078125
+      ],
+      "up_minus_oracle": [
+        -18.0,
+        -25.33,
+        -11.33
+      ],
+      "verdict_vs_oracle": "below oracle"
+    },
+    "GaussianBlur_s5": {
+      "raw": 8.0,
+      "oracle_sigma": 6,
+      "oracle": 21.33,
+      "adair_native": 12.0,
+      "adair_upsampled": 10.0,
+      "up_minus_native": [
+        -2.0,
+        -4.67,
+        0.0,
+        0.25
+      ],
+      "up_minus_oracle": [
+        -11.33,
+        -16.67,
+        -6.67
+      ],
+      "verdict_vs_oracle": "below oracle"
+    },
+    "LensBlur_s3": {
+      "raw": 36.67,
+      "oracle_sigma": 4,
+      "oracle": 43.33,
+      "adair_native": 36.67,
+      "adair_upsampled": 38.0,
+      "up_minus_native": [
+        1.33,
+        -2.67,
+        5.33,
+        0.75390625
+      ],
+      "up_minus_oracle": [
+        -5.33,
+        -10.68,
+        0.67
+      ],
+      "verdict_vs_oracle": "ties oracle"
+    },
+    "LensBlur_s4": {
+      "raw": 13.33,
+      "oracle_sigma": 8,
+      "oracle": 25.33,
+      "adair_native": 23.33,
+      "adair_upsampled": 15.33,
+      "up_minus_native": [
+        -8.0,
+        -14.0,
+        -2.0,
+        0.01690053939819336
+      ],
+      "up_minus_oracle": [
+        -10.0,
+        -15.33,
+        -5.33
+      ],
+      "verdict_vs_oracle": "below oracle"
+    },
+    "LensBlur_s5": {
+      "raw": 15.33,
+      "oracle_sigma": 8,
+      "oracle": 26.67,
+      "adair_native": 22.67,
+      "adair_upsampled": 19.33,
+      "up_minus_native": [
+        -3.33,
+        -8.0,
+        1.33,
+        0.266845703125
+      ],
+      "up_minus_oracle": [
+        -7.33,
+        -12.67,
+        -2.0
+      ],
+      "verdict_vs_oracle": "below oracle"
+    },
+    "Haze_s3": {
+      "raw": 54.0,
+      "oracle_sigma": 8,
+      "oracle": 57.33,
+      "adair_native": 80.67,
+      "adair_upsampled": 58.67,
+      "up_minus_native": [
+        -22.0,
+        -29.33,
+        -15.33,
+        2.0954757928848267e-09
+      ],
+      "up_minus_oracle": [
+        1.33,
+        -3.33,
+        6.0
+      ],
+      "verdict_vs_oracle": "ties oracle"
+    },
+    "Haze_s4": {
+      "raw": 27.33,
+      "oracle_sigma": 6,
+      "oracle": 31.33,
+      "adair_native": 62.67,
+      "adair_upsampled": 32.0,
+      "up_minus_native": [
+        -30.67,
+        -38.67,
+        -23.33,
+        3.481659405224491e-13
+      ],
+      "up_minus_oracle": [
+        0.67,
+        -3.33,
+        4.67
+      ],
+      "verdict_vs_oracle": "ties oracle"
+    },
+    "Haze_s5": {
+      "raw": 17.33,
+      "oracle_sigma": 0,
+      "oracle": 17.33,
+      "adair_native": 37.33,
+      "adair_upsampled": 21.33,
+      "up_minus_native": [
+        -16.0,
+        -22.0,
+        -10.0,
+        1.1920928955078125e-07
+      ],
+      "up_minus_oracle": [
+        4.0,
+        0.67,
+        8.0
+      ],
+      "verdict_vs_oracle": "BEATS ORACLE"
+    }
+  }
+}

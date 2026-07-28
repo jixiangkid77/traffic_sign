@@ -1,0 +1,127 @@
+
+======================================================================
+[2026-05-09 17:23:18] STARTED: D_noise_branch_sanity
+  python: 3.10.20
+  opencv: 4.13.0
+  torch:  2.5.1
+  params: {"testsets": ["clean", "lowcontrast", "noisy"], "noise_threshold_percentile": 85, "thresholds": {"T1": 0.1206, "T2": 0.1061, "T3": 0.0726, "T4": 0.4085}, "methods": ["no_prep", "v1_paper", "v2_median", "v2_gaussian"], "calibration": {"method": "stratified_sampling_by_class", "samples_per_class": 50, "n_classes": 43, "seed": 42}}
+[2026-05-09 17:23:18] FINISHED: D_noise_branch_sanity
+  Calibration: stratified, 0 images, T_noise=0.0500
+  Median Δnoisy=+0.00pp, Δclean=+0.00pp
+  Gaussian Δnoisy=+0.00pp, Δclean=+0.00pp
+
+======================================================================
+[2026-05-09 17:23:35] STARTED: C_latency
+  python: 3.10.20
+  opencv: 4.13.0
+  torch:  2.5.1
+  params: {"n_images": 1000, "n_warmup": 100, "n_repeat": 5, "image_size": [32, 32], "mode": "single-image (one image at a time)", "methods": ["baseline", "fixed_clahe", "fixed_gamma", "fixed_stretch", "va_adaptive"], "thresholds_for_va_adaptive": {"T1": 0.1206, "T2": 0.1061, "T3": 0.0726, "T4": 0.4085}, "thread_config": {"OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "cv2_threads": 1, "torch_threads": 1}}
+
+======================================================================
+[2026-05-09 17:43:21] STARTED: D_noise_branch_sanity
+  python: 3.10.20
+  opencv: 4.13.0
+  torch:  2.5.1
+  params: {"testsets": ["clean", "lowcontrast", "noisy"], "noise_threshold_percentile": 85, "thresholds": {"T1": 0.1206, "T2": 0.1061, "T3": 0.0726, "T4": 0.4085}, "methods": ["no_prep", "v1_paper", "v2_median", "v2_gaussian"], "calibration": {"method": "stratified_sampling_by_class", "samples_per_class": 50, "n_classes": 43, "seed": 42}}
+[2026-05-09 17:46:32] FINISHED: D_noise_branch_sanity
+  T_noise=0.1075, calib n=2150
+  Median Δnoisy=+0.24pp
+  Gaussian Δnoisy=+0.67pp
+
+======================================================================
+[2026-05-09 17:47:07] STARTED: C_latency
+  python: 3.10.20
+  opencv: 4.13.0
+  torch:  2.5.1
+  params: {"n_images": 1000, "n_warmup": 100, "n_repeat": 5, "image_size": [32, 32], "mode": "single-image (one image at a time)", "methods": ["baseline", "fixed_clahe", "fixed_gamma", "fixed_stretch", "va_adaptive"], "thread_config": {"OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "OPENBLAS_NUM_THREADS": "1", "cv2_threads": 1, "torch_threads": 1}}
+
+======================================================================
+[2026-05-09 17:53:48] STARTED: D_noise_branch_sanity
+  python: 3.10.20
+  opencv: 4.13.0
+  torch:  2.5.1
+  params: {"version": "v5", "testsets": ["clean", "lowcontrast", "noisy"], "noise_threshold_percentile": 85, "thresholds": {"T1": 0.1206, "T2": 0.1061, "T3": 0.0726, "T4": 0.4085}, "methods": ["no_prep", "v1_paper", "v2_median", "v2_gaussian"], "v1_implementation": "enhance.adaptive_enhance (paper's function)", "calibration": {"method": "stratified_sampling_by_class", "samples_per_class": 50, "n_classes": 43, "seed": 42}}
+
+======================================================================
+[2026-05-09 19:32:53] STARTED: D_noise_branch_sanity
+  python: 3.10.20
+  opencv: 4.13.0
+  torch:  2.5.1
+  params: {"version": "v5", "testsets": ["clean", "lowcontrast", "noisy"], "noise_threshold_percentile": 85, "thresholds": {"T1": 0.1206, "T2": 0.1061, "T3": 0.0726, "T4": 0.4085}, "methods": ["no_prep", "v1_paper", "v2_median", "v2_gaussian"], "v1_implementation": "enhance.adaptive_enhance (paper's function)", "calibration": {"method": "stratified_sampling_by_class", "samples_per_class": 50, "n_classes": 43, "seed": 42}}
+
+======================================================================
+[2026-05-09 19:35:07] STARTED: D_noise_branch_sanity
+  python: 3.10.20
+  opencv: 4.13.0
+  torch:  2.5.1
+  params: {"version": "v6", "testsets": ["clean", "lowcontrast", "noisy"], "noise_threshold_percentile": 85, "thresholds": {"T1": 0.1206, "T2": 0.1061, "T3": 0.0726, "T4": 0.4085}, "v1_implementation": "enhance.adaptive_enhance(img, T1, T2, T3, T4)"}
+[2026-05-09 19:41:01] FINISHED: D_noise_branch_sanity
+  v6: T_noise=0.1075
+  Median Δnoisy=+0.24pp
+  Gaussian Δnoisy=+0.67pp
+
+======================================================================
+[2026-05-09 19:42:33] STARTED: C_latency
+  python: 3.10.20
+  opencv: 4.13.0
+  torch:  2.5.1
+  params: {"version": "v4", "n_images": 1000, "n_warmup": 100, "n_repeat": 5, "image_size": [32, 32], "mode": "single-image", "methods": ["baseline", "fixed_clahe", "fixed_gamma", "fixed_stretch", "va_adaptive"], "thread_config": {"OMP_NUM_THREADS": "1", "MKL_NUM_THREADS": "1", "cv2_threads": 1, "torch_threads": 1}, "va_adaptive_call": "adaptive_enhance(img, T1, T2, T3, T4)"}
+[2026-05-09 19:42:36] FINISHED: C_latency
+  C. Latency:
+    baseline: 0.0001 ms
+    fixed_clahe: 0.0510 ms
+    fixed_gamma: 0.0294 ms
+    fixed_stretch: 0.0146 ms
+    va_adaptive: 0.0496 ms
+  
+    VA-Adaptive: 0.0496 ms
+
+======================================================================
+[2026-05-09 19:54:33] STARTED: D_noise_branch_sanity
+[2026-05-09 19:58:45] FINISHED: D_noise_branch_sanity
+  v7 paper-consistent pipeline
+  T_noise=0.0827
+  v1_paper: clean=91.67%, lc=65.10%, noisy=67.36%
+  Median Δnoisy=+0.35pp
+  Gaussian Δnoisy=+1.18pp
+
+======================================================================
+[2026-05-09 20:01:53] STARTED: A_metrics
+[2026-05-09 20:12:44] FINISHED: A_metrics
+  A. Metrics summary:
+    clean          baseli=93.9/90.3  fixed_=79.8/76.7  fixed_=87.9/81.1  fixed_=74.8/74.0  va_ada=91.7/86.8
+    lowlight       baseli=54.1/57.1  fixed_=60.6/56.5  fixed_=80.4/79.1  fixed_=25.4/31.5  va_ada=75.2/73.7
+    foggy          baseli=67.3/60.6  fixed_=68.8/63.7  fixed_=40.9/27.3  fixed_=76.7/70.1  va_ada=73.0/67.1
+    lowcontrast    baseli=66.5/59.6  fixed_=71.1/63.5  fixed_=43.3/25.2  fixed_=68.0/69.0  va_ada=65.1/58.7
+    noisy          baseli=68.7/67.6  fixed_=41.8/42.8  fixed_=62.2/61.0  fixed_=60.7/61.2  va_ada=67.4/66.8
+    mixed          baseli=58.7/55.6  fixed_=51.3/49.2  fixed_=49.2/44.6  fixed_=56.4/56.3  va_ada=63.5/60.0
+
+======================================================================
+[2026-05-09 20:15:57] STARTED: C_latency
+[2026-05-09 20:16:00] FINISHED: C_latency
+  C. Latency (v5):
+    baseline: 0.0001 ms
+    fixed_clahe: 0.0901 ms
+    fixed_gamma: 0.0847 ms
+    fixed_stretch: 0.0322 ms
+    va_adaptive: 0.0933 ms
+  
+    VA-Adaptive: 0.0933 ms (at original sizes)
+
+======================================================================
+[2026-05-09 20:18:23] STARTED: B_threshold_sensitivity
+[2026-05-09 20:34:21] FINISHED: B_threshold_sensitivity
+  B. Threshold sensitivity:
+    Range: [67.58, 69.03]
+    Std: 0.5014
+
+======================================================================
+[2026-05-10 13:17:24] STARTED: E_routing_stats
+[2026-05-10 13:19:14] FINISHED: E_routing_stats
+  E. Routing-branch proportions:
+    clean        : passthrough dominant (82.1%) | gamma=14%, clahe=3%, stretch=0%, passthrough=82%
+    lowlight     : gamma dominant (65.2%) | gamma=65%, clahe=0%, stretch=1%, passthrough=34%
+    foggy        : passthrough dominant (62.2%) | gamma=0%, clahe=30%, stretch=8%, passthrough=62%
+    lowcontrast  : clahe dominant (42.4%) | gamma=14%, clahe=42%, stretch=5%, passthrough=39%
+    noisy        : passthrough dominant (87.7%) | gamma=12%, clahe=0%, stretch=0%, passthrough=88%
+    mixed        : passthrough dominant (58.4%) | gamma=20%, clahe=19%, stretch=2%, passthrough=58%

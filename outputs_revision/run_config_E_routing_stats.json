@@ -1,0 +1,41 @@
+{
+  "script_name": "E_routing_stats",
+  "timestamp": "2026-05-10T13:17:24.586808",
+  "timestamp_human": "2026-05-10 13:17:24",
+  "environment": {
+    "platform": "Windows-10-10.0.26200-SP0",
+    "python_version": "3.10.20",
+    "cpu": "Intel64 Family 6 Model 189 Stepping 1, GenuineIntel",
+    "cwd": "D:\\Project\\traffic_sign",
+    "opencv_version": "4.13.0",
+    "torch_version": "2.5.1",
+    "cuda_available": false
+  },
+  "params": {
+    "version": "v1",
+    "purpose": "round-2 reviewer comment 2: routing-branch verification",
+    "testsets": [
+      "clean",
+      "lowlight",
+      "foggy",
+      "lowcontrast",
+      "noisy",
+      "mixed"
+    ],
+    "branches": [
+      "gamma",
+      "clahe",
+      "stretch",
+      "passthrough"
+    ],
+    "thresholds": {
+      "T1": 0.1206,
+      "T2": 0.1061,
+      "T3": 0.0726,
+      "T4": 0.4085
+    },
+    "pipeline": "cv2.imread \u2192 compute b/c/e @ original size \u2192 priority-ordered routing"
+  },
+  "model_path": "D:\\Project\\traffic_sign\\models\\mbnetv3_baseline.pth",
+  "outputs_dir": "D:\\Project\\traffic_sign\\outputs_revision"
+}
