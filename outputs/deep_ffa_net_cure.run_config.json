@@ -1,0 +1,9 @@
+{
+  "script": "O_eval_three_locally.py",
+  "model": "ffa_net",
+  "timestamp": "2026-07-24T16:32:07",
+  "weight": "D:\\Project\\traffic_sign\\models\\ffa_net_ots.pk",
+  "params": 4455913,
+  "batch": 32,
+  "degraded_average": 55.906065088757394
+}

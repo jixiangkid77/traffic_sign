@@ -1,0 +1,99 @@
+{
+  "timestamp": "2026-07-03T19:31:13",
+  "n_calib": 852,
+  "n_eval": 361,
+  "classes_in_eval": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    22,
+    23,
+    24,
+    25,
+    26,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42
+  ],
+  "margin": 0.1,
+  "thresholds_A_gtsrb": {
+    "T1": 0.1206,
+    "T2": 0.1061,
+    "T3": 0.0726,
+    "T4": 0.4085
+  },
+  "thresholds_B_gtsdb": {
+    "T1": 0.1342,
+    "T2": 0.131,
+    "T3": 0.0843,
+    "T4": 0.4095
+  },
+  "eval_results": {
+    "passthrough": {
+      "acc": 98.34,
+      "macro_f1": 98.37
+    },
+    "gamma": {
+      "acc": 95.84,
+      "macro_f1": 91.78
+    },
+    "clahe": {
+      "acc": 85.04,
+      "macro_f1": 83.09
+    },
+    "stretch": {
+      "acc": 88.92,
+      "macro_f1": 84.88
+    },
+    "va_A": {
+      "acc": 96.95,
+      "macro_f1": 92.51,
+      "routing": {
+        "clahe": 3.0,
+        "gamma": 7.5,
+        "passthrough": 89.5
+      }
+    },
+    "va_B": {
+      "acc": 96.12,
+      "macro_f1": 93.49,
+      "routing": {
+        "clahe": 5.0,
+        "gamma": 11.1,
+        "passthrough": 83.9
+      }
+    },
+    "oracle4": {
+      "acc": 99.17,
+      "macro_f1": 98.99
+    }
+  },
+  "transferability_delta_pp": 0.83
+}

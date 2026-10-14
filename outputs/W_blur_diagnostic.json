@@ -1,0 +1,65 @@
+{
+  "noise_floor_per_challenge": {
+    "Decolorization": {
+      "median_sigma_hat": 2.521,
+      "ratio_to_clean_floor": 0.948
+    },
+    "LensBlur": {
+      "median_sigma_hat": 0.613,
+      "ratio_to_clean_floor": 0.231
+    },
+    "CodecError": {
+      "median_sigma_hat": 5.955,
+      "ratio_to_clean_floor": 2.24
+    },
+    "Darkening": {
+      "median_sigma_hat": 0.714,
+      "ratio_to_clean_floor": 0.269
+    },
+    "DirtyLens": {
+      "median_sigma_hat": 2.411,
+      "ratio_to_clean_floor": 0.907
+    },
+    "Exposure": {
+      "median_sigma_hat": 2.783,
+      "ratio_to_clean_floor": 1.047
+    },
+    "GaussianBlur": {
+      "median_sigma_hat": 0.568,
+      "ratio_to_clean_floor": 0.214
+    },
+    "Noise": {
+      "median_sigma_hat": 9.388,
+      "ratio_to_clean_floor": 3.532
+    },
+    "Rain": {
+      "median_sigma_hat": 1.1,
+      "ratio_to_clean_floor": 0.414
+    },
+    "Shadow": {
+      "median_sigma_hat": 2.111,
+      "ratio_to_clean_floor": 0.794
+    },
+    "Snow": {
+      "median_sigma_hat": 5.044,
+      "ratio_to_clean_floor": 1.898
+    },
+    "Haze": {
+      "median_sigma_hat": 1.098,
+      "ratio_to_clean_floor": 0.413
+    }
+  },
+  "clean_noise_scan": {
+    "0": 80.77,
+    "2": 80.92,
+    "4": 81.43,
+    "8": 82.4,
+    "16": 80.84
+  },
+  "clean_floor": 2.658,
+  "verdict": {
+    "blur_below_floor": true,
+    "clean_gain": 1.63,
+    "noise_helps_clean": true
+  }
+}

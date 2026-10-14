@@ -1,0 +1,9 @@
+[20:12:30] M_significance_addenda start; boot=5000 seed=42
+[20:12:35] [M1] GTSDB eval crops: 361
+[20:12:35] [M1] acc: {'passthrough': np.float64(98.34), 'va_A': np.float64(96.95), 'va_B': np.float64(96.12)}
+[20:12:35] [M1] va_A - passthrough: {'mcnemar': {'n01': 6, 'n10': 1, 'n_discordant': 7, 'p_two_sided': 0.12499999999999996, 'z_normal_cc': 1.5119}, 'bootstrap': {'point_pp': np.float64(-1.385), 'ci95_pp': [-2.77, 0.0], 'excludes_zero': False}}
+[20:12:35] [M1] va_A - va_B: {'mcnemar': {'n01': 1, 'n10': 4, 'n_discordant': 5, 'p_two_sided': 0.3750000000000005, 'z_normal_cc': 0.8944}, 'bootstrap': {'point_pp': np.float64(0.831), 'ci95_pp': [-0.277, 1.939], 'excludes_zero': False}}
+[20:12:42] [M2] degraded images: 33800; cells: 25; balanced=True (sizes 1352..1352)
+[20:12:42] [M2] VA-rule deg-avg (cell) = 57.32  (expect ~57.32)
+[20:14:28] [M2] logreg: deg-avg=56.04 (diff -1.28pp)  McNemar p=3.84e-16  boot [-1.581, -0.986]
+[20:16:30] [M2] mlp: deg-avg=58.05 (diff +0.73pp)  McNemar p=6.03e-07  boot [0.451, 1.024]

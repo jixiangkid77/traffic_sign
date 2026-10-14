@@ -1,0 +1,11 @@
+{
+  "timestamp": "2026-07-04T20:12:30",
+  "boot": 5000,
+  "seed": 42,
+  "imports": [
+    "I_gtsdb_eval",
+    "H_learned_router"
+  ],
+  "method": "McNemar exact (primary) + paired bootstrap 95% CI (corroboration)",
+  "point_metric": "cell-averaged deg-avg (CURE) / crop accuracy (GTSDB)"
+}

@@ -1,0 +1,99 @@
+{
+  "points": {
+    "all12": {
+      "dcp": 58.89423076923078,
+      "adair": 57.7835305719921,
+      "vb": 58.21252465483233,
+      "va": 56.646942800788956
+    },
+    "ex_haze": {
+      "dcp": 57.68827326519633,
+      "adair": 57.042764927380304,
+      "vb": 57.2512103281334,
+      "va": 56.44835933297472
+    },
+    "ex_haze_rain": {
+      "dcp": 58.88461538461538,
+      "adair": 59.05029585798817,
+      "vb": 58.989644970414204,
+      "va": 58.68195266272189
+    }
+  },
+  "diffs": {
+    "all12|DCP-AdaIR": {
+      "point": 1.11,
+      "lo": 0.87,
+      "hi": 1.35,
+      "sig": "SIGNIFICANT"
+    },
+    "all12|VB-AdaIR": {
+      "point": 0.43,
+      "lo": 0.24,
+      "hi": 0.61,
+      "sig": "SIGNIFICANT"
+    },
+    "ex_haze|DCP-AdaIR": {
+      "point": 0.65,
+      "lo": 0.39,
+      "hi": 0.89,
+      "sig": "SIGNIFICANT"
+    },
+    "ex_haze|VB-AdaIR": {
+      "point": 0.21,
+      "lo": 0.01,
+      "hi": 0.39,
+      "sig": "SIGNIFICANT"
+    },
+    "ex_haze_rain|DCP-AdaIR": {
+      "point": -0.17,
+      "lo": -0.42,
+      "hi": 0.08,
+      "sig": "n.s. (tied)"
+    },
+    "ex_haze_rain|VB-AdaIR": {
+      "point": -0.06,
+      "lo": -0.24,
+      "hi": 0.12,
+      "sig": "n.s. (tied)"
+    }
+  },
+  "oracles": {
+    "all12": {
+      "o4": 66.41888560157791,
+      "o5": 70.51528599605521,
+      "o6": 69.36637080867851,
+      "gain_one_operator": 4.1,
+      "gain_two_deep": 2.95
+    },
+    "ex_haze": {
+      "o4": 66.41742872512104,
+      "o5": 69.70010758472297,
+      "o6": 68.79101667563205,
+      "gain_one_operator": 3.28,
+      "gain_two_deep": 2.37
+    },
+    "ex_haze_rain": {
+      "o4": 68.9423076923077,
+      "o5": 71.24112426035504,
+      "o6": 71.17603550295857,
+      "gain_one_operator": 2.3,
+      "gain_two_deep": 2.23
+    }
+  },
+  "cascade_on_vb": {
+    "tau_per_fold": [
+      0.525,
+      0.475,
+      0.525,
+      0.475,
+      0.525
+    ],
+    "heldout_mean": 58.34420755318664,
+    "heldout_std": 0.37151434059828964,
+    "vb_base_mean": 58.212250011389,
+    "adair_mean": 57.783458612363894,
+    "paired_diff_mean": 0.13195754179763952,
+    "paired_diff_std": 0.03519282915016319,
+    "invocation_pct": 18.91017721288324
+  }
+}

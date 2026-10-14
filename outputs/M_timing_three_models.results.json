@@ -1,0 +1,42 @@
+{
+  "script": "M_timing_three_models.py",
+  "timestamp": "2026-07-22T21:40:15",
+  "protocol": {
+    "source": "L2_timing_full_pool.py",
+    "seed": 42,
+    "n_degraded": 200,
+    "warmup": 10,
+    "threads": 1,
+    "batch": 1,
+    "device": "cpu"
+  },
+  "reference_ms": {
+    "classifier": 1.28,
+    "adair": 203.667,
+    "cidnet": 18.253
+  },
+  "n_images_loaded": 210,
+  "results": {
+    "zero_dce": {
+      "n_timed": 200,
+      "mean_ms": 151.491,
+      "median_ms": 9.441,
+      "p95_ms": 607.416,
+      "params": 79416,
+      "weight": "D:\\Project\\traffic_sign\\models\\zero_dce_Epoch99.pth",
+      "vs_classifier": 7.38
+    },
+    "ffa_net": {
+      "n_timed": 200,
+      "mean_ms": 323.223,
+      "median_ms": 140.414,
+      "p95_ms": 1149.223,
+      "params": 4455913,
+      "weight": "D:\\Project\\traffic_sign\\models\\ffa_net_ots.pk",
+      "vs_classifier": 109.7
+    }
+  },
+  "not_timed": {
+    "promptir": "no file under models/ matched *prompt* or *promptir*; present: adair5d.ckpt, cidnet_hvi.safetensors, ffa_net_ots.pk, mbnetv3_baseline.pth, mbnetv3_baseline_v4_10ep.pth, mobilenet_baseline.pth, shufflenet_baseline.pth, zero_dce_Epoch99.pth  |  PromptIR publishes its checkpoint on the repository's releases page; download it into models/ and run again"
+  }
+}

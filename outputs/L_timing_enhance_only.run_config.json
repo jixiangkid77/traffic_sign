@@ -1,0 +1,23 @@
+{
+  "script": "L_timing_enhance_only.py",
+  "timestamp": "2026-07-04T17:34:23",
+  "models": "both",
+  "n": 200,
+  "warmup": 10,
+  "seed": 42,
+  "cure_root": "D:\\Project\\traffic_sign\\datasets\\CURE-TSR",
+  "adair_weight": "D:\\Project\\traffic_sign\\models\\adair5d.ckpt",
+  "cidnet_weight": "HF cache",
+  "threads": {
+    "torch": 1,
+    "cv2": 1
+  },
+  "scope_semantics": {
+    "va_rule": "compute_stats + route_decision + apply_branch, original resolution, same functions as F cache run",
+    "adair_enhance": "J.enhance_batch single image: BGR2RGB, /255, pad reflect to /8, forward, clamp, unpad, back to uint8 BGR",
+    "cidnet_enhance": "same wrapper as adair_enhance",
+    "classify32": "shared downstream stage, excluded from the three enhancement scopes"
+  },
+  "torch": "2.5.1",
+  "opencv": "4.13.0"
+}

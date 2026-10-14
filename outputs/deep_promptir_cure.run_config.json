@@ -1,0 +1,9 @@
+{
+  "script": "O_eval_three_locally.py",
+  "model": "promptir",
+  "timestamp": "2026-07-24T05:10:45",
+  "weight": "D:\\Project\\traffic_sign\\models\\model.ckpt",
+  "params": 35592263,
+  "batch": 32,
+  "degraded_average": 55.24161735700198
+}

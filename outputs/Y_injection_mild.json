@@ -1,0 +1,278 @@
+{
+  "design": {
+    "challenges": [
+      7,
+      2,
+      12,
+      4
+    ],
+    "severities": [
+      1,
+      2
+    ],
+    "per_cell": 400,
+    "sigmas": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      6,
+      8,
+      12,
+      16,
+      24,
+      32
+    ]
+  },
+  "results": {
+    "GaussianBlur": {
+      "raw_acc": 51.0,
+      "noise_scan": {
+        "0": 51.0,
+        "1": 51.5,
+        "2": 51.88,
+        "3": 53.88,
+        "4": 54.88,
+        "6": 58.25,
+        "8": 60.38,
+        "12": 61.0,
+        "16": 55.62,
+        "24": 47.5,
+        "32": 40.62
+      },
+      "oracle_sigma": 12,
+      "oracle_acc": 61.0,
+      "gamma": {
+        "flat_out": 2.844,
+        "acc": 48.62,
+        "vs_raw": -2.38,
+        "vs_oracle": -12.38,
+        "lo": -15.25,
+        "hi": -9.62,
+        "p": 1.7341943407260798e-17,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": false
+      },
+      "clahe": {
+        "flat_out": 11.291,
+        "acc": 63.12,
+        "vs_raw": 12.12,
+        "vs_oracle": 2.12,
+        "lo": -1.0,
+        "hi": 5.25,
+        "p": 0.20433958933821775,
+        "verdict": "NOT above injection",
+        "is_contrast_condition": false
+      },
+      "stretch": {
+        "flat_out": 4.495,
+        "acc": 52.12,
+        "vs_raw": 1.12,
+        "vs_oracle": -8.88,
+        "lo": -12.0,
+        "hi": -5.75,
+        "p": 5.636664667131689e-08,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": false
+      },
+      "dcp": {
+        "flat_out": 6.3,
+        "acc": 51.37,
+        "vs_raw": 0.37,
+        "vs_oracle": -9.63,
+        "lo": -13.37,
+        "hi": -6.0,
+        "p": 3.5522364079368384e-07,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": false
+      }
+    },
+    "LensBlur": {
+      "raw_acc": 58.62,
+      "noise_scan": {
+        "0": 58.62,
+        "1": 59.0,
+        "2": 59.13,
+        "3": 61.25,
+        "4": 62.75,
+        "6": 65.38,
+        "8": 67.38,
+        "12": 67.75,
+        "16": 66.0,
+        "24": 57.0,
+        "32": 46.88
+      },
+      "oracle_sigma": 12,
+      "oracle_acc": 67.75,
+      "gamma": {
+        "flat_out": 3.068,
+        "acc": 54.25,
+        "vs_raw": -4.37,
+        "vs_oracle": -13.5,
+        "lo": -16.37,
+        "hi": -10.75,
+        "p": 7.019412612420993e-22,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": false
+      },
+      "clahe": {
+        "flat_out": 12.924,
+        "acc": 65.88,
+        "vs_raw": 7.25,
+        "vs_oracle": -1.88,
+        "lo": -4.62,
+        "hi": 0.87,
+        "p": 0.2139651540354207,
+        "verdict": "NOT above injection",
+        "is_contrast_condition": false
+      },
+      "stretch": {
+        "flat_out": 4.609,
+        "acc": 59.75,
+        "vs_raw": 1.12,
+        "vs_oracle": -8.0,
+        "lo": -11.0,
+        "hi": -5.25,
+        "p": 7.570125632548689e-08,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": false
+      },
+      "dcp": {
+        "flat_out": 6.473,
+        "acc": 57.5,
+        "vs_raw": -1.12,
+        "vs_oracle": -10.25,
+        "lo": -13.5,
+        "hi": -7.0,
+        "p": 2.924256039228829e-09,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": false
+      }
+    },
+    "Haze": {
+      "raw_acc": 71.0,
+      "noise_scan": {
+        "0": 71.0,
+        "1": 71.38,
+        "2": 72.0,
+        "3": 71.75,
+        "4": 72.88,
+        "6": 73.5,
+        "8": 72.12,
+        "12": 69.0,
+        "16": 64.88,
+        "24": 52.12,
+        "32": 40.62
+      },
+      "oracle_sigma": 6,
+      "oracle_acc": 73.5,
+      "gamma": {
+        "flat_out": 1.375,
+        "acc": 60.13,
+        "vs_raw": -10.87,
+        "vs_oracle": -13.37,
+        "lo": -16.0,
+        "hi": -10.88,
+        "p": 2.0789775229686443e-25,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": false
+      },
+      "clahe": {
+        "flat_out": 13.818,
+        "acc": 62.12,
+        "vs_raw": -8.88,
+        "vs_oracle": -11.38,
+        "lo": -14.0,
+        "hi": -8.87,
+        "p": 4.5696109026582386e-17,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": false
+      },
+      "stretch": {
+        "flat_out": 2.628,
+        "acc": 79.62,
+        "vs_raw": 8.62,
+        "vs_oracle": 6.12,
+        "lo": 3.88,
+        "hi": 8.38,
+        "p": 1.7769640600713887e-07,
+        "verdict": "RESTORES beyond injection",
+        "is_contrast_condition": false
+      },
+      "dcp": {
+        "flat_out": 4.367,
+        "acc": 76.88,
+        "vs_raw": 5.88,
+        "vs_oracle": 3.38,
+        "lo": 0.38,
+        "hi": 6.37,
+        "p": 0.032821830697569845,
+        "verdict": "RESTORES beyond injection",
+        "is_contrast_condition": true
+      }
+    },
+    "Darkening": {
+      "raw_acc": 77.25,
+      "noise_scan": {
+        "0": 77.25,
+        "1": 77.12,
+        "2": 77.5,
+        "3": 78.88,
+        "4": 79.88,
+        "6": 81.0,
+        "8": 79.62,
+        "12": 77.12,
+        "16": 70.5,
+        "24": 58.13,
+        "32": 47.5
+      },
+      "oracle_sigma": 6,
+      "oracle_acc": 81.0,
+      "gamma": {
+        "flat_out": 2.831,
+        "acc": 76.62,
+        "vs_raw": -0.62,
+        "vs_oracle": -4.38,
+        "lo": -6.75,
+        "hi": -2.12,
+        "p": 0.00036579567696276875,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": true
+      },
+      "clahe": {
+        "flat_out": 15.895,
+        "acc": 62.0,
+        "vs_raw": -15.25,
+        "vs_oracle": -19.0,
+        "lo": -22.0,
+        "hi": -16.0,
+        "p": 1.2049720099231175e-33,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": false
+      },
+      "stretch": {
+        "flat_out": 1.505,
+        "acc": 65.5,
+        "vs_raw": -11.75,
+        "vs_oracle": -15.5,
+        "lo": -18.13,
+        "hi": -12.75,
+        "p": 9.815829609038498e-31,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": false
+      },
+      "dcp": {
+        "flat_out": 3.831,
+        "acc": 75.38,
+        "vs_raw": -1.88,
+        "vs_oracle": -5.62,
+        "lo": -7.75,
+        "hi": -3.62,
+        "p": 1.5877990745379465e-07,
+        "verdict": "WORSE than best injection",
+        "is_contrast_condition": false
+      }
+    }
+  }
+}

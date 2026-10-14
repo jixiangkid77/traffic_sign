@@ -1,0 +1,176 @@
+{
+  "config": {
+    "script": "L2_timing_full_pool.py",
+    "timestamp": "2026-07-15T20:42:49",
+    "models": "both",
+    "n_degraded": 200,
+    "n_clean": 100,
+    "warmup": 10,
+    "seed": 42,
+    "cure_root": "D:\\Project\\traffic_sign\\datasets\\CURE-TSR",
+    "eval_challenges": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "eval_challenges_before_override": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12
+    ],
+    "estimator": "per-image perf_counter, single pass, first `warmup` discarded; mean / median / p95 (identical to L_timing_enhance_only)",
+    "functions": "F_master_sweep_cache (the code that produced the cached predictions), J.enhance_batch, J.build_transform",
+    "adair_weight": "D:\\Project\\traffic_sign\\models\\adair5d.ckpt",
+    "cidnet_weight": "HF cache",
+    "threads": {
+      "torch": 1,
+      "cv2": 1
+    },
+    "dcp_guided_filter": false,
+    "supersedes": [
+      "L_timing_enhance_only (2026-07-04): sampled from the 5-challenge era and has no DCP row",
+      "DCP 11.1 ms/img, read off the batch throughput line 89.9 img/s",
+      "V-B front end 1.52 ms",
+      "always-AdaIR 333 ms",
+      "the 219x ratio"
+    ],
+    "torch": "2.5.1",
+    "opencv": "4.13.0"
+  },
+  "image_sizes": {
+    "degraded": {
+      "n_loaded": 210,
+      "h_mean": 40.4,
+      "h_min": 11,
+      "h_max": 285,
+      "w_mean": 40.1,
+      "w_min": 11,
+      "w_max": 211
+    },
+    "clean": {
+      "n_loaded": 110,
+      "h_mean": 37.5,
+      "h_min": 11,
+      "h_max": 192,
+      "w_mean": 38.1,
+      "w_min": 11,
+      "w_max": 206
+    }
+  },
+  "results": {
+    "stats": {
+      "n_timed": 200,
+      "mean_ms": 0.049,
+      "median_ms": 0.035,
+      "p95_ms": 0.12
+    },
+    "route": {
+      "n_timed": 200,
+      "mean_ms": 0.043,
+      "median_ms": 0.031,
+      "p95_ms": 0.106
+    },
+    "op_gamma": {
+      "n_timed": 200,
+      "mean_ms": 0.068,
+      "median_ms": 0.028,
+      "p95_ms": 0.198
+    },
+    "op_clahe": {
+      "n_timed": 200,
+      "mean_ms": 0.067,
+      "median_ms": 0.051,
+      "p95_ms": 0.148
+    },
+    "op_stretch": {
+      "n_timed": 200,
+      "mean_ms": 0.03,
+      "median_ms": 0.012,
+      "p95_ms": 0.096
+    },
+    "op_dcp": {
+      "n_timed": 200,
+      "mean_ms": 0.358,
+      "median_ms": 0.24,
+      "p95_ms": 1.067
+    },
+    "va_rule_degraded": {
+      "n_timed": 200,
+      "mean_ms": 0.057,
+      "median_ms": 0.039,
+      "p95_ms": 0.115,
+      "branch_histogram": {
+        "passthrough": 159,
+        "stretch": 13,
+        "gamma": 16,
+        "clahe": 22
+      }
+    },
+    "va_rule_clean": {
+      "n_timed": 100,
+      "mean_ms": 0.047,
+      "median_ms": 0.035,
+      "p95_ms": 0.098,
+      "branch_histogram": {
+        "passthrough": 110
+      }
+    },
+    "vb_degraded": {
+      "n_timed": 200,
+      "mean_ms": 0.099,
+      "median_ms": 0.041,
+      "p95_ms": 0.254,
+      "branch_histogram": {
+        "passthrough": 159,
+        "stretch": 13,
+        "gamma": 16,
+        "clahe": 22
+      }
+    },
+    "vb_clean": {
+      "n_timed": 100,
+      "mean_ms": 0.04,
+      "median_ms": 0.034,
+      "p95_ms": 0.081,
+      "branch_histogram": {
+        "passthrough": 110
+      }
+    },
+    "classify32": {
+      "n_timed": 200,
+      "mean_ms": 1.303,
+      "median_ms": 1.277,
+      "p95_ms": 1.527
+    },
+    "adair_enhance": {
+      "n_timed": 200,
+      "mean_ms": 371.133,
+      "median_ms": 203.667,
+      "p95_ms": 1158.741
+    },
+    "cidnet_enhance": {
+      "n_timed": 200,
+      "mean_ms": 26.07,
+      "median_ms": 18.252,
+      "p95_ms": 63.349
+    }
+  }
+}

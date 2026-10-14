@@ -1,0 +1,55 @@
+{
+  "endpoints": {
+    "passthrough": {
+      "clean": 80.77,
+      "degraded": 54.49
+    },
+    "va_rule": {
+      "clean": 80.77,
+      "degraded": 56.65
+    },
+    "vb": {
+      "clean": 80.77,
+      "degraded": 58.21
+    },
+    "dcp": {
+      "clean": 79.36,
+      "degraded": 58.89
+    },
+    "adair": {
+      "clean": 79.51,
+      "degraded": 57.78
+    },
+    "cidnet": {
+      "clean": 80.1,
+      "degraded": 56.31
+    }
+  },
+  "beam1": {
+    "clean_branch_shares_pct": {
+      "passthrough": 100.0,
+      "gamma": 0.0,
+      "clahe": 0.0,
+      "stretch": 0.0
+    },
+    "vb_bit_identical_to_passthrough_on_clean": true,
+    "cost_of_always_dcp_on_clean": -1.41
+  },
+  "beam2": {
+    "clean_gain": 1.41,
+    "degraded_loss": 0.68,
+    "breakeven_clean_fraction_pct": 32.7,
+    "convention": "mixture = w * CF + (1-w) * deg-avg; arithmetic corollary of Table II, not a new benchmark"
+  },
+  "beam3": {
+    "dominates_adair_at_every_mixture": true,
+    "dcp_invocation_pct_degraded": 11.9,
+    "dcp_invocation_pct_clean": 0.0,
+    "avg_frontend_latency_ms": {
+      "vb_degraded": 1.52,
+      "vb_clean": 0.2,
+      "always_dcp": 11.1,
+      "always_adair": 333.0
+    }
+  }
+}

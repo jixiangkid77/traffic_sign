@@ -1,0 +1,114 @@
+{
+  "script": "N_timing_stable.py",
+  "timestamp": "2026-07-23T00:10:44",
+  "protocol": {
+    "repeats": 5,
+    "keep": "minimum per crop",
+    "n_degraded": 200,
+    "warmup": 10,
+    "seed": 42,
+    "threads": 1,
+    "batch": 1,
+    "blocks": 2,
+    "device": "cpu"
+  },
+  "n_images": 210,
+  "classifier_ms": 1.2082,
+  "final": {
+    "gamma": {
+      "block1_ms": 0.0246,
+      "block2_ms": 0.0242,
+      "spread_pct": 1.7,
+      "quote_ms": 0.024,
+      "vs_classifier": 0.02
+    },
+    "clahe": {
+      "block1_ms": 0.0416,
+      "block2_ms": 0.0411,
+      "spread_pct": 1.2,
+      "quote_ms": 0.041,
+      "vs_classifier": 0.03
+    },
+    "stretch": {
+      "block1_ms": 0.0121,
+      "block2_ms": 0.0119,
+      "spread_pct": 1.7,
+      "quote_ms": 0.012,
+      "vs_classifier": 0.01
+    },
+    "dcp": {
+      "block1_ms": 0.2084,
+      "block2_ms": 0.204,
+      "spread_pct": 2.2,
+      "quote_ms": 0.206,
+      "vs_classifier": 0.17
+    },
+    "rule": {
+      "block1_ms": 0.0585,
+      "block2_ms": 0.0579,
+      "spread_pct": 1.0,
+      "quote_ms": 0.058,
+      "vs_classifier": 0.05
+    },
+    "vb": {
+      "block1_ms": 0.0541,
+      "block2_ms": 0.0545,
+      "spread_pct": 0.7,
+      "quote_ms": 0.0543,
+      "vs_classifier": 0.04
+    },
+    "classifier": {
+      "block1_ms": 1.2066,
+      "block2_ms": 1.2082,
+      "spread_pct": 0.1,
+      "quote_ms": 1.21,
+      "vs_classifier": 1.0
+    },
+    "adair": {
+      "block1_ms": 210.5301,
+      "block2_ms": 210.2569,
+      "spread_pct": 0.1,
+      "quote_ms": 210.39,
+      "vs_classifier": 174.14,
+      "params": 28784824,
+      "weight": "D:\\Project\\traffic_sign\\models\\adair5d.ckpt"
+    },
+    "cidnet": {
+      "block1_ms": 18.0892,
+      "block2_ms": 18.3702,
+      "spread_pct": 1.6,
+      "quote_ms": 18.2,
+      "vs_classifier": 15.09,
+      "params": 1975569,
+      "weight": "D:\\Project\\traffic_sign\\models\\cidnet_hvi.safetensors"
+    },
+    "zero_dce": {
+      "block1_ms": 121.6446,
+      "block2_ms": 113.5509,
+      "spread_pct": 7.1,
+      "quote_ms": 118.0,
+      "vs_classifier": 97.33,
+      "params": 79416,
+      "weight": "D:\\Project\\traffic_sign\\models\\zero_dce_Epoch99.pth"
+    },
+    "ffa_net": {
+      "block1_ms": 138.2672,
+      "block2_ms": 138.6528,
+      "spread_pct": 0.3,
+      "quote_ms": 138.46,
+      "vs_classifier": 114.6,
+      "params": 4455913,
+      "weight": "D:\\Project\\traffic_sign\\models\\ffa_net_ots.pk"
+    },
+    "promptir": {
+      "block1_ms": 218.8433,
+      "block2_ms": 220.8119,
+      "spread_pct": 0.9,
+      "quote_ms": 219.83,
+      "vs_classifier": 181.95,
+      "params": 35592263,
+      "weight": "D:\\Project\\traffic_sign\\models\\model.ckpt"
+    }
+  },
+  "not_measured": {}
+}

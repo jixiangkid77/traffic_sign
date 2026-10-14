@@ -1,0 +1,214 @@
+{
+  "timestamp": "2026-07-24T17:14:32",
+  "boot": 5000,
+  "seed": 42,
+  "point_metrics": {
+    "passthrough": {
+      "deg_acc": 54.49,
+      "deg_f1": 36.58,
+      "cf_acc": 80.77
+    },
+    "gamma": {
+      "deg_acc": 52.57,
+      "deg_f1": 34.32,
+      "cf_acc": 79.81
+    },
+    "clahe": {
+      "deg_acc": 46.41,
+      "deg_f1": 30.77,
+      "cf_acc": 66.05
+    },
+    "stretch": {
+      "deg_acc": 50.41,
+      "deg_f1": 35.12,
+      "cf_acc": 77.29
+    },
+    "va_rule": {
+      "deg_acc": 56.65,
+      "deg_f1": 38.11,
+      "cf_acc": 80.77
+    },
+    "cidnet": {
+      "deg_acc": 56.31,
+      "deg_f1": 39.55,
+      "cf_acc": 80.1
+    },
+    "adair": {
+      "deg_acc": 57.78,
+      "deg_f1": 39.3,
+      "cf_acc": 79.51
+    },
+    "zero_dce": {
+      "deg_acc": 50.93,
+      "deg_f1": 30.59,
+      "cf_acc": 78.85
+    },
+    "ffa_net": {
+      "deg_acc": 55.91,
+      "deg_f1": 38.35,
+      "cf_acc": 79.51
+    },
+    "promptir": {
+      "deg_acc": 55.24,
+      "deg_f1": 37.94,
+      "cf_acc": 78.99
+    }
+  },
+  "acc_ci": {
+    "passthrough": [
+      54.19,
+      54.8
+    ],
+    "gamma": [
+      52.27,
+      52.88
+    ],
+    "clahe": [
+      46.09,
+      46.73
+    ],
+    "stretch": [
+      50.12,
+      50.72
+    ],
+    "va_rule": [
+      56.34,
+      56.96
+    ],
+    "cidnet": [
+      56.03,
+      56.62
+    ],
+    "adair": [
+      57.48,
+      58.09
+    ],
+    "zero_dce": [
+      50.62,
+      51.23
+    ],
+    "ffa_net": [
+      55.6,
+      56.22
+    ],
+    "promptir": [
+      54.94,
+      55.55
+    ]
+  },
+  "f1_ci": {
+    "passthrough": [
+      36.22,
+      36.85
+    ],
+    "va_rule": [
+      37.75,
+      38.38
+    ],
+    "cidnet": [
+      39.18,
+      39.83
+    ],
+    "adair": [
+      38.94,
+      39.57
+    ]
+  },
+  "legacy": {},
+  "legacy_oracle7": null,
+  "oracle4": 66.42,
+  "oracle6": 69.37,
+  "oracle4_per_challenge": {
+    "Decolorization": 77.8,
+    "LensBlur": 56.29,
+    "CodecError": 62.41,
+    "Darkening": 80.67,
+    "DirtyLens": 83.02,
+    "Exposure": 59.44,
+    "GaussianBlur": 46.08,
+    "Noise": 64.17,
+    "Rain": 41.17,
+    "Shadow": 83.82,
+    "Snow": 75.74,
+    "Haze": 66.43
+  },
+  "oracle6_per_challenge": {
+    "Decolorization": 79.97,
+    "LensBlur": 59.17,
+    "CodecError": 64.99,
+    "Darkening": 84.54,
+    "DirtyLens": 84.42,
+    "Exposure": 60.46,
+    "GaussianBlur": 48.39,
+    "Noise": 67.09,
+    "Rain": 44.94,
+    "Shadow": 85.15,
+    "Snow": 77.59,
+    "Haze": 75.7
+  },
+  "ceiling_cf": 80.77,
+  "gap_capture": {
+    "va_rule": 8.2,
+    "adair": 12.5,
+    "oracle4": 45.4,
+    "oracle6": 56.6
+  },
+  "paired_diffs": {
+    "adair-va_rule": {
+      "point": 1.14,
+      "ci": [
+        0.94,
+        1.32
+      ],
+      "verdict": "SIGNIFICANT"
+    },
+    "cidnet-va_rule": {
+      "point": -0.33,
+      "ci": [
+        -0.54,
+        -0.12
+      ],
+      "verdict": "SIGNIFICANT"
+    },
+    "va_rule-passthrough": {
+      "point": 2.15,
+      "ci": [
+        2.04,
+        2.27
+      ],
+      "verdict": "SIGNIFICANT"
+    },
+    "adair-passthrough": {
+      "point": 3.29,
+      "ci": [
+        3.11,
+        3.47
+      ],
+      "verdict": "SIGNIFICANT"
+    },
+    "adair-cidnet": {
+      "point": 1.47,
+      "ci": [
+        1.24,
+        1.7
+      ],
+      "verdict": "SIGNIFICANT"
+    }
+  },
+  "complementarity_pct": {
+    "both_correct": 53.37,
+    "va_only": 3.28,
+    "adair_only": 4.42,
+    "both_wrong": 38.93,
+    "adair_unique_vs_classical_pool": 1.73,
+    "classical_pool_unique_vs_adair": 10.37
+  },
+  "params": {
+    "CompactCNN": 145291,
+    "AdaIR": 28784824,
+    "CIDNet": 1975569,
+    "Zero-DCE": 79416,
+    "FFA-Net": 4455913,
+    "PromptIR": "n/a (weights only on Colab)"
+  }
+}
